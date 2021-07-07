@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "todaynight",
+			"path": "todaynight"
+		},
+		{
+			"name": "fonts",
+			"path": "bootstrap-3.3.2-dist\\bootstrap-3.3.2-dist\\fonts"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5505,
+		"liveServer.settings.useLocalIp": true,
+		"liveServer.settings.multiRootWorkspaceName": "todaynight"
+	}
+}

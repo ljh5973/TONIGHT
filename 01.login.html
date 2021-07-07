@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- 부트스트랩 js참조 -->
+    <script src="js/bootstrap.js"></script>
+    
+    
+    <!--부트스트랩 css파일참조-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    
+    <!--카카오 SDK로드-->
+    <script src="js/kakao.js"></script>
+    
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+    <h3>TONIGHT</h3>
+    </header>
+
+    <section>
+        <div>
+            <div class="container"> 
+                <div class="row">
+                    <div class="login-wrap">
+                        <div class="login-wrap2">
+                            <div class="col-sm-2 col-xs-6 idpw">
+                                아이디<br/>
+                                <input type="text" class="id"><br/>
+                                비밀번호<br/>
+                                <input type="password" class="pw">
+                            </div>
+                            <div class="col-sm-2 col-xs-6 login-form">
+                                <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                                    <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+                                </a>
+                            </div>
+                            <div class="col-sm-2 col-xs-6 login-form">
+                                <button name="button" class="login">로그인</button>
+                                <input type="checkbox">로그인 상태 유지
+                                <input type="checkbox">아이디 유지
+                            </div>
+                            <div class="col-md-12 col-sm-2 col-xs-6 idpwfind">
+                                <hr/>
+                                <button name="button">아이디 찾기</button>
+                                |
+                                <button name="button">비밀번호 찾기</button>
+                                
+                                <button name="button" class="join">회원가입</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        Kakao.init('ed86fb26609dd550694d3504b3a475f8');
+        function loginWithKakao() {
+            Kakao.Auth.login({
+                success: function(authObj) {
+                    console.log(authObj);
+                    Kakao.Auth.setAccessToken(authObj.access_token);
+
+                   getInfo(); 
+                },
+                fail: function (err) {
+                    console.log(err);
+                },
+            })
+        }
+        
+        function getInfo() {
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function (res) {
+                        alert(JSON.stringify(res))
+                    },
+                    fail: function (error) {
+                        alert(
+                            'login success, but failed to request user information: ' + JSON.stringify(error) )
+                    },
+                })
+            }
+    </script>
+    
+</body>
+</html>

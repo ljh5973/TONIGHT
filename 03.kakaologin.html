@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--카카오 SDK로드-->
+    <script src="js/kakao.js"></script>
+</head>
+<body>
+    
+    <a id="custom-login-btn" href="javascript:loginWithKakao()">
+        <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+    </a>
+    <script>
+        Kakao.init('ed86fb26609dd550694d3504b3a475f8');
+        function loginWithKakao() {
+            Kakao.Auth.login({
+                success: function (authObj) {
+                    alert(JSON.stringify(authObj))
+                },
+                fail: function (err) {
+                    alert(JSON.stringify(err))
+                },
+            })
+        }
+    </script>
+</body>
+</html>
