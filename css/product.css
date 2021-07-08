@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 설정 */
+* {
+    margin : 0;
+    padding : 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-section {
+    margin-top: 15px;
+}
+
+/* top 버튼 */
+.productDetail-top {
+    display: block;
+    background-color: #5f1e09f1;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    opacity: 0.9;
+}
+
+.productDetail-top:hover {
+    color: white;
+    opacity: 1;
+}
+
+.productDetail-top:focus {
+    color: white;
+    opacity: 1;
+}
+
+
+/* product.html */
+/* 왼쪽 사이드 바 */
+.product-search, .product-category {
+    padding : 10px;
+}
+
+.product-search {
+    text-align: center;
+}
+
+.product-search > input {
+    width: 85%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.product-search > a {
+    /* color: #5f1e09f1; */
+    font-size: 15px;
+    font-weight: 600;
+    cursor: hand;
+}
+
+.product-category span {
+    display: block;
+    border-bottom: 2px solid gainsboro;
+    margin-bottom: 20px;
+    color: rgb(90,90,90);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.subtype {
+    background-color: #5f1e09f1;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.subtype a {
+    color: #ffffff;
+    float: left;
+    padding-left: 10px;
+}
+
+.subtype .arrow-down {
+    float: right;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+.sub-content {
+    padding-left: 20px;
+}
+
+/* product */
+.product-left {
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+    margin: 15px 0;
+    position: sticky;
+    top: 15px;
+}
+
+.product-right > li {
+    padding: 15px;
+}
+
+.product-li {
+    position: relative;
+}
+
+.product-detail-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(0,0,0,0.5); */
+    opacity: 0;
+    text-align: center;
+}
+
+.product-detail-hover a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100%;
+}
+
+
+.product-detail-hover:hover, .product-detail-hover a:hover {
+    opacity: 1;
+    color: white;
+}
+
+.product-img, .product-info {
+    width: 100%;
+}
+
+.product-img img {
+    object-fit: contain;
+    width : 100%;
+    height: 283px;
+}
+
+.product-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-info > div {
+    margin-bottom: 5px;
+}
+
+.product-info .product-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.product-info .product-price {
+    color: #5f1e09f1;
+    font-weight: 600;
+}
+
+/* aside */
+.side {
+    position: fixed;
+    right: 0px;
+    top:250px;
+    z-index:30px;
+}
+.side-list > li > a {
+    display: block;
+    padding:20px;
+    width: 80px;
+    text-align: center;
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    /* font-size: 0.7em; */
+    border-bottom: 1px solid #777;
+    letter-spacing: -1px;
+}
+
+
+/* product-detail.html */
+/* 상세보기 영역 */
+.productDetail-wrap {
+    /* margin-top: 15px; */
+    padding: 15px 0;
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+    width: 100%;
+}
+
+.productDetail-title {
+    padding: 40px;
+    text-align: center;
+}
+
+.productDetail-img {
+    padding : 15px;
+}
+
+.productDetail-img > div {
+    background-color: white;
+
+}
+
+.productDetail-content {
+    padding: 15px;
+}
+
+.productDetail-img {
+    text-align: center;
+}
+
+.productDetail-img img {
+    width: 100%;
+}
+
+.productDetail-info {
+    border-top: 3px solid black;
+    font-size: 17px;
+    color: rgb(90,90,90);
+}
+
+.productDetail-line {
+    border-bottom: 2px solid #f0f0f0;
+    overflow: hidden;
+    position: relative;
+    padding: 5px;
+
+}
+
+.productDetail-line > div {
+    
+    padding: 5px;
+}
+
+.productDetail-left {
+    float: left;
+}
+
+.productDetail-right {
+    position: absolute;
+    left: 150px;
+}
+
+.productDetail-group {
+    padding-top: 50px;
+}
+
+.productDetail-priceWrap {
+    overflow: hidden;
+}
+
+.productDetail-priceWrap > div {
+    display: inline-block;
+}
+
+.productDetail-priceName {
+    font-size: 25px;
+    color: rgb(90,90,90);
+}
+
+.productDetail-price {
+    float: right;
+    font-size: 30px;
+    color: #5f1e09f1;
+}
+
+.productDetail-btn {
+    overflow: hidden;
+}
+
+.productDetail-btn button {
+    float: left;
+    width: 50%;
+    border-radius: 0px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    background-image: none; /* 버튼 그라디언트 지우기 */
+}
+
+.productDetail-btn .right {
+    color: rgb(250,250,250);
+    background-color: #5f1e09f1;
+}
+
+.productDetail-btn .right:hover {
+    color: white;
+    background-color: rgb(90,34,18);
+}
+
+/* 제품 내용 영역 */
+.productContent-wrap {
+    padding: 15px;
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+    font-size: 15px;
+}
+
+/* 댓글영역 */
+.replyWrite-wrap {
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+}
+
+.reply-wrap {
+    padding : 15px 0;
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+}
+
+.reply-inner {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.replyInner-img {
+    float: left;
+}
+
+.replyInner-img img {
+    width: 50px;
+}
+
+.replyInner-info {
+    margin-left : 15px;
+    display: inline-block;
+    /* float: left; */
+}
+
+.replyInner-info > div {
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+.replyInfo-star > span {
+    font-size: 18px;
+    color: orange;
+}
+
+.replyInfo-star .star-empty {
+    color: gainsboro;
+}
+
+.reply-write {
+    overflow: hidden;
+}
+
+.reply-write > textarea {
+    margin-bottom: 15px;
+}
+
+.reply-write > button {
+    float: right;
+    border-radius: 0px;
+    background-image: none;
+    font-weight: 600;
+}
+
+/* 댓글 */
+.replyList-group {
+    display: inline-block;
+}
