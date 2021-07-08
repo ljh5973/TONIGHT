@@ -18,45 +18,49 @@
 }
 
 
-.row {
-    border: #777 solid 1px;
 
-}
 
-.row > .mypage-left > p {
+.subscribe-row > .subscribe-left > div > a {
     display: block;
     text-align: left;
     font-size: x-large;
     text-decoration: underline;
     text-underline-position:under;
-    text-decoration-color: beige;
+    text-decoration-color: rgb(240, 220, 220);
     overflow: hidden;
+    margin-bottom: 20px;
+    color: #777;
 }
 
-.mypage-left {
-    box-sizing: border-box;
-    padding-bottom: 50px;
+.subscribe-row > .subscribe-left > div:hover {
+    background-color: antiquewhite;
 }
 
-.mypage-left > p {
+.subscribe-left {
+    box-sizing: border-box;;
+    padding-left: 30px;
+    padding-top: 25px;
+}
+
+.subscribe-left > p {
     margin-top: 20px;
 }
 
-.mypage-right {
+.subscribe-right {
     /* border: #777 solid 1px; */
     box-sizing: border-box;
     float: right;
 }
 
-.mypage-right > h2 {
+.subscribe-right > h2 {
     text-align: left;
 }
 
-.mypage-right > .mypage-h2 {
+.subscribe-right > .subscribe-h2 {
     margin-top: 50px;
 }
 
-.mypage-sub {
+.subscribe-sub {
     /* border: #777 solid 1px; */
     background-color: rgb(240, 220, 220);
     margin-bottom: 30px;
@@ -72,30 +76,25 @@
 
 } */
 
-.mypage-sub > .mypage-info {
+.subscribe-sub > .subscribe-info {
     border: #777 solid 1px;
 }
  
-.mypage-sub > .mypage-im {
 
-    /* float: left; */
-
-}
-
-.mypage-sub > .mypage-im > img {
+.subscribe-sub > .subscribe-im > img {
     background-size: contain;
     width: 170px;
     border-radius: 5px;
 }
 
-.mypage-btn {
+.subscribe-btn {
 
     /* float: right; */
     overflow: hidden;
     
 }
 
-.mypage-btn > .mypage-extention >button
+.subscribe-btn > .subscribe-extention >button
 {
     background:#5f1e09f1;
   border-radius: 5px;
@@ -112,7 +111,7 @@
 
 }
 
-.mypage-btn > .mypage-cancle >button {
+.subscribe-btn > .subscribe-cancle >button {
     background:rgb(250, 250, 250);
     border: 3px solid #777;
     border-radius: 5px;
@@ -127,6 +126,10 @@
     float: right;
 }
 
-.mypage-btn > .mypage-extention >button:hover {
+.subscribe-btn > .subscribe-extention >button:hover {
     background-color: rgb(90, 34, 18);
+}
+
+.subscribe-row {
+    padding-bottom: 150px;
 }
