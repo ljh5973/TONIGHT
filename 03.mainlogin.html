@@ -5,23 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <!-- 부트스트랩 js참조 -->
-    <script src="js/bootstrap.js"></script>
-    
-    
-    <!--부트스트랩 css파일참조-->
+
     <link rel="stylesheet" href="css/bootstrap.css">
     
     <link rel="stylesheet" href="css/bootstrap-theme.css">
-
     
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/mainlogin.css">
     <!--카카오 SDK로드-->
     <script src="js/kakao.js"></script>
-    
-    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+
     <header>
 
         <div class="empty">
@@ -37,9 +33,6 @@
             <li><a href="#">LOGIN</a></li>
             <li><a href="#">JOIN</a></li>
         </ul>
-            
-        </div>
-        
         
         <div class="ham-container">
             <a href="#" class="hamBtn">
@@ -52,39 +45,23 @@
     </header>
 
     <section>
-        <div>
-            <div class="container"> 
-                <div class="row">
-                    <div class="login-wrap">
-                        <div class="login-wrap2">
-                            <div class="col-sm-2 col-xs-6 idpw">
-                                아이디<br/>
-                                <input type="text" class="id"><br/>
-                                비밀번호<br/>
-                                <input type="password" class="pw">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 login-form">
+                    <div class="login-btn">
+                        <a class="loginbtnclick" href="#">
+                            <div id="tonight-loginbtn">
+                                TONIGHT 로그인
                             </div>
-                            <div class="col-sm-2 col-xs-6 login-form">
-                                
-                            </div>
-                            <div class="col-sm-2 col-xs-6 login-form">
-                                <button name="button" class="login">로그인</button>
-                                <input type="checkbox">로그인 상태 유지
-                                <input type="checkbox">아이디 유지
-                            </div>
-                            <div class="col-md-12 col-sm-2 col-xs-6 idpwfind">
-                                <hr/>
-                                <button name="button">아이디 찾기</button>
-                                |
-                                <button name="button">비밀번호 찾기</button>
-                                
-                                <button name="button" class="join">회원가입</button>
-                            </div>
-                        </div>
+                        </a>
+                        <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                            <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
+            
     </section>
 
     <footer>
@@ -125,8 +102,46 @@
 
         </div>
     </footer>
+        
+        <script>
+            Kakao.init('ed86fb26609dd550694d3504b3a475f8');
+            Kakao.isInitialized();
+            
+            function loginWithKakao() {
+                Kakao.Auth.login({
+                    success: function(authObj) {
+                        console.log(authObj);
+                        Kakao.Auth.setAccessToken(authObj.access_token);
+                        
+                        getInfo(); 
+                    },
+                    fail: function (err) {
+                        console.log(err);
+                    },
+                })
+            }
+            
+            function getInfo() {
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function (res) {
+                        console.log(res);
+                        
+                        var email = res.kakao_account.email;
+                        var gender = res.kakao_account.gender;
+                        var nick = res.kakao_account.profile.nickname;
+                        var profile_img = res.kakao_account.profile.thumbnail_image_url;
 
-    
-    
+                        console.log(email, gender, nick, profile_img);
+                    },
+                    fail: function (error) {
+                        alert( '카카오 로그인에 실패했습니다.' + JSON.stringify(error) )
+                    },
+                })
+            }
+
+        
+     
+    </script>
 </body>
 </html>
