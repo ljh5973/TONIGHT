@@ -13,7 +13,7 @@
     
     <script src="js/bootstrap.js"></script>
 
-    <link rel="stylesheet" href="css/withdraw.css">
+    <link rel="stylesheet" href="css/modify_ok.css">
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -75,27 +75,54 @@
     </header>
 
     <section>
-        <div class="withdraw-container">
-            <div class="withdraw-row" >
-                <div class="col-md-3 col-sm-12 col-xs-12 withdraw-left">
-                    <a href="mypage.html" class="withdraw-hover">
+        <div class="modify_ok-container">
+            <div class="modify_ok-row" >
+                <div class="col-md-3 col-sm-12 col-xs-12 modify_ok-left">
+                    <a href="mypage.html" class="modify_ok-hover">
                         <div>내정보 </div>
                     </a>
-                    <a href="subscribe.html" class="withdraw-hover">
+                    <a href="subscribe.html" class="modify_ok-hover">
                         <div>구독정보 & 장바구니</div>
                     </a>
-                    <a href="modify.html" class="withdraw-hover">
+                    <a href="modify.html" class="modify_ok-hover">
                         <div>회원정보수정</div>
                     </a>
-                    <a href="withdraw.html" class="withdraw-hover">
+                    <a href="withdraw.html" class="modify_ok-hover">
                         <div>회원탈퇴</div>
                     </a>
             </div>
 
-            <div class="col-md-8 col-sm-12 col-xs-12 withdraw-right">
-                <p>비밀번호를 입력하세요<p>
-                <input type="password" class="pw">
-                <button type="submit" onclick="location.href='withdraw_ok.html'" class="withdraw_ok">확인</button>
+            <div class="col-md-8 col-sm-12 col-xs-12 modify_ok-right">
+                <div class="join">
+                    <div class="col-sm-12 col-xs-12 join-wrap">
+                        <div class="col-sm-12 col-xs-12 id-form">
+                            아이디<br/>
+                            <input readonly class="id">
+                         </div>
+                         <div class="col-sm-12 col-xs-12 pw-form">
+                             비밀번호<br/>
+                             <input type="password" class="pw">
+                         </div>
+                         <div class="col-sm-12 col-xs-12 pwCheck-form">
+                             비밀번호 확인<br/>
+                             <input type="password" class="pwCheck">
+                         </div>
+                         <div class="col-sm-12 col-xs-12 birth-form">
+                             생년월일<br/>
+                             <input type="text" class="birth">
+                             <button type="button" class="cal">달력</button>
+                         </div>
+                         <div class="col-sm-12 col-xs-12 add-form">
+                             주소<br/>
+                             <input type="text" class="add"><br/>
+                             상세주소<br/>
+                             <input type="text" class="add2">
+                             <button type="button" class="joinbtn">회원수정</button>
+                         </div>
+                         
+                     </div>
+                 </div>
+             </div>
             </div>
                         
 

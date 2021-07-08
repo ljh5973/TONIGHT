@@ -20,7 +20,7 @@
 
 
 
-.modify-row > .modify-left > .modify-hover > div {
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover > div {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,7 +28,7 @@
     color: #777;
 }
 
-.modify-row > .modify-left > .modify-hover {
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover {
 
     align-items: center;
         display: flex;
@@ -38,28 +38,26 @@
 
 }
 
-.modify-row > .modify-left > .modify-hover:hover {
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover:hover {
     background-color: bisque;
 }
 
-.modify-left {
+.withdraw_ok-left {
     box-sizing: border-box;;
     padding-left: 10px;
     padding-top: 25px;
 }
 
-.modify-row {
-    padding-bottom: 150px;
-}
-
-
-.modify-right {
-    padding-top: 30px;
+.withdraw_ok-row {
     padding-bottom: 400px;
 }
 
-.modify-right > p {
+.withdraw_ok-right > p {
     font-size: revert;
     font-weight: bold;
 }
 
+.withdraw_ok-right {
+    padding-top: 30px;
+    padding-bottom: 400px;
+}

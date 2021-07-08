@@ -1,0 +1,18 @@
+
+svg .municipality {
+    fill: #efefef;
+    stroke: #fff;
+}
+
+svg .municipality-label {
+    fill: #bbb;
+    font-size: 12px;
+    font-weight: 300;
+    text-anchor: middle;
+}
+
+svg .municipality:hover {
+    fill: black;
+    stroke: #fff;
+}
+
