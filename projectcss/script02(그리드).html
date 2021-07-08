@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 css파일참조 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- 부트스트랩 테마파일참조 -->
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    <!-- 부트스트랩 js참조 -->
+    <script src="js/bootstrap.js"></script>
+
+    <style>
+        * {margin: 0; padding: 0;}
+        ul, li {list-style: none;}
+        .box {background-color: aqua;}
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- PC, 테블릿, 모바일환경을 전부다 지정하려면? -->
+
+    <section>
+        <div class="container">
+            <ul class="row">
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box">
+                    박스
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box">박스</li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box">박스</li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box">박스</li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <!-- 
+        부트스트랩의 반응형 그리드로 가운데정렬  
+        col클래스들이 float:left를 들고 있어서 
+        가운데 정렬이 들어가지 않는 경우는, 사용자 클래스로 float:none으로 float을 제거
+    -->
+    <style>
+        .box2 {background-color: aqua; margin: 0 auto; float: none; }
+
+    </style>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-xs-12 box2">가운데</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+</body>
+</html>
