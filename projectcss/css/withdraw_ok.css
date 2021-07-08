@@ -20,7 +20,8 @@
 
 
 
-.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover > div {
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover > div,
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok > div {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,17 +29,18 @@
     color: #777;
 }
 
-.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover {
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover,
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok {
 
     align-items: center;
         display: flex;
         border-radius: 0 50px 50px 0;
         padding: 10px 16px 10px 24px;
         position: relative;
-
 }
 
-.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover:hover {
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok-hover:hover,
+.withdraw_ok-row > .withdraw_ok-left > .withdraw_ok {
     background-color: bisque;
 }
 

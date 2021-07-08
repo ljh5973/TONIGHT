@@ -20,7 +20,8 @@
 
 
 
-.subscribe-row > .subscribe-left > .subscribe-hover > div {
+.subscribe-row > .subscribe-left > .subscribe-hover > div,
+.subscribe-row > .subscribe-left > .subscribe > div {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,7 +29,8 @@
     color: #777;
 }
 
-.subscribe-row > .subscribe-left > .subscribe-hover {
+.subscribe-row > .subscribe-left > .subscribe-hover,
+.subscribe-row > .subscribe-left > .subscribe {
 
     align-items: center;
         display: flex;
@@ -38,7 +40,8 @@
 
 }
 
-.subscribe-row > .subscribe-left > .subscribe-hover:hover {
+.subscribe-row > .subscribe-left > .subscribe-hover:hover,
+.subscribe-row > .subscribe-left > .subscribe {
     background-color: bisque;
 }
 

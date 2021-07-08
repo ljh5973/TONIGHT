@@ -20,7 +20,8 @@
 
 
 
-.withdraw-row > .withdraw-left > .withdraw-hover > div {
+.withdraw-row > .withdraw-left > .withdraw-hover > div,
+.withdraw-row > .withdraw-left > .withdraw > div {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,7 +29,8 @@
     color: #777;
 }
 
-.withdraw-row > .withdraw-left > .withdraw-hover {
+.withdraw-row > .withdraw-left > .withdraw-hover,
+.withdraw-row > .withdraw-left > .withdraw {
 
     align-items: center;
         display: flex;
@@ -38,7 +40,8 @@
 
 }
 
-.withdraw-row > .withdraw-left > .withdraw-hover:hover {
+.withdraw-row > .withdraw-left > .withdraw-hover:hover,
+.withdraw-row > .withdraw-left > .withdraw {
     background-color: bisque;
 }
 

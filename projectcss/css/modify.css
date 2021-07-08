@@ -20,7 +20,8 @@
 
 
 
-.modify-row > .modify-left > .modify-hover > div {
+.modify-row > .modify-left > .modify-hover > div,
+.modify-row > .modify-left > .modify > div  {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,7 +29,8 @@
     color: #777;
 }
 
-.modify-row > .modify-left > .modify-hover {
+.modify-row > .modify-left > .modify-hover,
+.modify-row > .modify-left > .modify {
 
     align-items: center;
         display: flex;
@@ -39,6 +41,10 @@
 }
 
 .modify-row > .modify-left > .modify-hover:hover {
+    background-color: bisque;
+}
+
+.modify-row > .modify-left > .modify {
     background-color: bisque;
 }
 

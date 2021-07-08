@@ -20,7 +20,8 @@
 
 
 
-.mypage-row > .mypage-left > .mypage-hover > div {
+.mypage-row > .mypage-left > .mypage-hover > div,
+.mypage-row > .mypage-left > .mypage > div {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,7 +29,8 @@
     color: #777;
 }
 
-.mypage-row > .mypage-left > .mypage-hover {
+.mypage-row > .mypage-left > .mypage-hover,
+.mypage-row > .mypage-left > .mypage {
 
     align-items: center;
         display: flex;
@@ -39,6 +41,10 @@
 }
 
 .mypage-row > .mypage-left > .mypage-hover:hover {
+    background-color: bisque;
+}
+
+.mypage-row > .mypage-left > .mypage {
     background-color: bisque;
 }
 
@@ -138,5 +144,68 @@
 }
 
 .mypage-row {
-    padding-bottom: 150px;
+    padding-bottom: 400px;
+}
+
+.join-wrap{
+    margin: 0 auto;
+    display: inline-block;
+    overflow: hidden;
+    width: 30%;
+    margin-left: 20%;
+    height: 100%;
+    padding-top: 2%;
+}
+
+.id,.name,.email,.birth,.add,.add2 {
+    width: 100%;
+    height: 50%;
+    border: 3px solid rgb(240,220,220);
+}
+.id-form,.name-form,.email-form,.birth-form,.add-form{
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    height: 15%;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+.id-form, .birth-form {
+    position: relative;
+}
+.add {
+    margin-bottom: 5px;
+}
+
+
+.idCheck,.cal {
+    float: right;
+}
+.login {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.idCheck, .cal {
+    position: absolute;
+    margin-left: -30px;
+    border-collapse: collapse;
+    height: 50%;
+    color: #5f1e09f1;
+    background-color: rgb(240,220,220);
+    border-color: rgb(240,220,220);
+}
+.joinbtn {
+    float: right;
+    height: 50%;
+    width: 100%;
+    margin-top: 30px;
+    color: #5f1e09f1;
+    background-color: rgb(240,220,220);
+    box-shadow: none;
+    border-color: rgb(240,220,220);
+}
+
+.img-form {
+    text-align: center;
 }

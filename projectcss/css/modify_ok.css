@@ -20,7 +20,8 @@
 
 
 
-.modify_ok-row > .modify_ok-left > .modify_ok-hover > div {
+.modify_ok-row > .modify_ok-left > .modify_ok-hover > div,
+.modify_ok-row > .modify_ok-left > .modify_ok > div {
     display: block;
     text-align: left;
     font-size: larger;
@@ -28,7 +29,8 @@
     color: #777;
 }
 
-.modify_ok-row > .modify_ok-left > .modify_ok-hover {
+.modify_ok-row > .modify_ok-left > .modify_ok-hover,
+.modify_ok-row > .modify_ok-left > .modify_ok {
 
     align-items: center;
         display: flex;
@@ -38,7 +40,8 @@
 
 }
 
-.modify_ok-row > .modify_ok-left > .modify_ok-hover:hover {
+.modify_ok-row > .modify_ok-left > .modify_ok-hover:hover,
+.modify_ok-row > .modify_ok-left > .modify_ok {
     background-color: bisque;
 }
 
