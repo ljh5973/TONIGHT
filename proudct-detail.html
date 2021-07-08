@@ -25,6 +25,59 @@
 </head>
 <body>
     
+    <header>
+
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">Tonight</a>
+        </div>
+    
+        <ul class="header-user">
+    
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+    
+    
+        
+        <div class="header-button">
+           
+            <div class="menu-button">
+                <a href="#"> <span>와인</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>맥주</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>위스키</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>브랜디</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>전통주</span></a>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
     <!-- 제품 정보-->
     <section class="product-section">
         <div class="container">
@@ -83,8 +136,21 @@
             </div>
         </div>
     </section>
+
+    <!-- 버튼s -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 productDetail-btnList">
+                    <button type="button" class="btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-chevron-left'></span> 이전 글</button>
+                    <button type="button" class="btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-chevron-right'></span> 다음 글</button>
+                    <button type="button" class="right btn btn-default" onclick="location.href='product.html'" id="replyRegist"><span class='glyphicon glyphicon-th-list'></span> 목록</button>   
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <!-- 댓글 -->
+    <!-- 댓글 입력 -->
     <section class="product-section">
         <div class="container">
             <div class="row">
@@ -116,6 +182,44 @@
                     </div>
                 </div>
                 
+        
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 댓글 목록 -->
+    <section class="product-section">
+        <div class="container">
+            <div class="row"> <!--ul-->
+                <div class="col-lg-12 reply-wrap"> <!--li-->
+                    <!-- 댓글 리스트, 로그인 안해도 볼 수는 있음-->
+                    <div class="col-sm-3 reply-inner">
+                        <div class="replyInner-img">
+                            <img src="img/profile.png">
+                        </div>
+                        <div class="replyInner-info">
+                            <div>홍길동</div>
+                            <div class="replyInfo-star">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star star-empty"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 replyWrite-content">
+                        <form action="" class="reply-write">
+                            <p class='clearfix'>맛있어요</p>
+                            <!-- <button type="button" class="left btn btn-default" id="replyRegist">이미지 업로드?</button> -->
+                            <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-pencil'></span> 수정</button>
+                            <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-remove'></span> 삭제</button>
+                            
+                        </form>
+                    </div>
+                </div>
                 <div class="col-lg-12 reply-wrap">
                     <!-- 댓글 리스트, 로그인 안해도 볼 수는 있음-->
                     <div class="col-sm-3 reply-inner">
@@ -133,8 +237,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-12 reply-wrap">
                     <div class="col-sm-9 replyWrite-content">
                         <form action="" class="reply-write">
                             <p class='clearfix'>맛있어요</p>
@@ -145,11 +247,50 @@
                         </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-menu">
+                    <ul class="footer-menu-inner">
+                        <li><a href="#">TONIGHT</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">상품문의</a></li>
+                        <li><a href="#">Q&A</a></li>
+
+                    </ul>
+
+                </div>
+                
+                
+                
+                
+                <div>
+
+                    <div class="copyright">
+                        
+                        
+                        <span>
+                        회사명 : TONIGHT   사업자등록번호 : 123-01-12345   대표자 : 유기농   전화번호 : 031-111-2222  <br/>  
+                        주소 : 경기도   사이트명 : TONIGHT    담당자명 : 유기농 <br/>
+                          담당자휴대폰 : 010-1111-2222   담당자이메일 : uginong@uginong.com<br/>
+                        Copyright ⓒ TONIGHT All Right Reserved.
+                        </span>
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
     <a href="javascript:window.scrollTo(0,0);" class="productDetail-top"><span class="glyphicon glyphicon-menu-up"></span></a>
     <script>
