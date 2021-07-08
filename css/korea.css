@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#korea {
+    width: 700px;
+    min-height: 700px;
+    float: left;
+    margin: 15px 35px;
+    background-color: white;
+}
+#states path {
+    fill: rgb(250, 250, 250);
+    stroke: #585858;
+    stroke-width: 1.5px;
+}
+
+#states path:hover {
+    fill: rgb(240, 220, 220);
+}
+
+
+#states path {
+    cursor: pointer;
+}
+
+#states text {
+    cursor: pointer;
+    font-size: 12px;
+    fill: #5f1e09f1;
+}
+
+rect.background {
+    color: white;
+    background-color: white;
+    fill: white;
+}

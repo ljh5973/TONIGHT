@@ -3,9 +3,9 @@
     
 window.onload=function(){
 
-    $('.hamBtn').click(function(ev){
-        ev.preventDefault();
-        $(this).toggleClass('active');
+    $(".hamBtn").click(function(ev){
+        
+        $(".hamBtn").toggleClass('active');
         $('.header-user').toggleClass('active');
     });
 

@@ -36,65 +36,74 @@
     <!-- 웹폰트카페 24 -->
     
 
+    <!-- 지도  -->
+
+    <link rel="stylesheet" href="css/korea.css" />
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/korea.js"></script>
 
 </head>
 
-<header>
-
-    <div class="empty">
-
-    </div>
-
-    <div class="header-logo">
-        <a href="#">TONIGHT</a>
-    </div>
-
-    <ul class="header-user">
-
-        <li><a href="#">LOGIN</a></li>
-        <li><a href="#">JOIN</a></li>
-    </ul>
-
-
-    
-    <div class="header-button">
-       
-        <div class="menu-button">
-            <a href="#"> <span>와인</span></a>
-        </div>
-        <div class="menu-button">
-            <a href="#"><span>맥주</span></a>
-        </div>
-        <div class="menu-button">
-            <a href="#"><span>위스키</span></a>
-        </div>
-        
-        <div class="menu-button">
-            <a href="#"><span>브랜디</span></a>
-        </div>
-        
-        <div class="menu-button">
-            <a href="#"><span>전통주</span></a>
-        </div>
-        
-        
-        
-    </div>
-    
-    
-    <div class="ham-container">
-        <a href="#" class="hamBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-    </div>
-</header>
 
 
 <body>
+    <div class="background"></div>
     
+    
+    
+    <header>
+    
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">TONIGHT</a>
+        </div>
+    
+        <ul class="header-user">
+    
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+    
+    
+        
+        <div class="header-button">
+           
+            <div class="menu-button">
+                <a href="#"> <span>와인</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>맥주</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>위스키</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>브랜디</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>전통주</span></a>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+  
     <section>
         <aside>
             
@@ -105,6 +114,72 @@
                 <span></span>
             </label>
             <div class="sidebar">
+                <div class="sidebar-login">
+                    <div class="container">
+                        <div class="row">
+                            <div class="login-wrap">
+                                <div class="login-wrap2">
+                                    <div class="idpw">
+                                        아이디<br/>
+                                        <input type="text" class="id"><br/>
+                                        비밀번호<br/>
+                                        <input type="password" class="pw">
+                                    </div>
+                                    <div class="login-form">
+                                        <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                                            <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+                                        </a>
+                                    </div>
+                                    <div class="login-form">
+                                        <button name="button" class="login">로그인</button>
+                                        <input type="checkbox">로그인 상태 유지
+                                        <input type="checkbox">아이디 유지
+                                    </div>
+                                    <div class="idpwfind">
+                                        <hr/>
+                                        <button name="button">아이디 찾기</button>
+                                        |
+                                        <button name="button">비밀번호 찾기</button>
+                                        
+                                        <button name="button" class="join">회원가입</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                   
+
+                    <div class="prev-comment">
+                        <span>이전에 봤던 상품</span>
+                    </div>
+                    <div class="sidebar-product">
+                        <div class="sidebar-img">
+                            <a href=""><img src="img/prev1.png" alt=""></a>
+                        </div>
+                        <div class="sidebar-img">
+                            <a href=""><img src="img/prev2.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar-img">
+                            <a href=""><img src="img/prev3.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar-img">
+                            <a href=""><img src="img/prev4.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    
+                <div class="sidebar-service">
+                    <a href="#"><span>REVIEW</span></a>
+                    <a href="#"><span>Q&A</span></a>
+                </div>
+                <div class="sidebar-bottom">
+                    <a href="#"><img src="img/facebook_sns.png" alt=""></a>
+                    <a href="#"><img src="img/insta_sns.png" alt=""></a>
+                    <a href="#"><i class="far fa-comment-alt fa-2x"></i></a>
+
+                </div>
+
             </div>
         </aside>
         <div class="main-section">
@@ -294,6 +369,13 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="korea"></div>
+                        
+                    </div>
+                </div>
+
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -301,59 +383,11 @@
                             <div class="brownline"></div>
                             <h3>REVIEW</h3>
                         </div>
-                        <div class="container">
-                            <div class="col-lg-3 reply-wrap">
-                                <div class="col-sm-9 replyWrite-content">
-                                    <form action="" class="reply-write">
-                                        <p class='clearfix'>맛있어요</p>
-                                        <!-- <button type="button" class="left btn btn-default" id="replyRegist">이미지 업로드?</button> -->
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-pencil'></span> 수정</button>
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-remove'></span> 삭제</button>
-                                        
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 reply-wrap">
-                                <div class="col-sm-9 replyWrite-content">
-                                    <form action="" class="reply-write">
-                                        <p class='clearfix'>맛있어요</p>
-                                        <!-- <button type="button" class="left btn btn-default" id="replyRegist">이미지 업로드?</button> -->
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-pencil'></span> 수정</button>
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-remove'></span> 삭제</button>
-                                        
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 reply-wrap">
-                                <div class="col-sm-9 replyWrite-content">
-                                    <form action="" class="reply-write">
-                                        <p class='clearfix'>맛있어요</p>
-                                        <!-- <button type="button" class="left btn btn-default" id="replyRegist">이미지 업로드?</button> -->
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-pencil'></span> 수정</button>
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-remove'></span> 삭제</button>
-                                        
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 reply-wrap">
-                                <div class="col-sm-9 replyWrite-content">
-                                    <form action="" class="reply-write">
-                                        <p class='clearfix'>맛있어요</p>
-                                        <!-- <button type="button" class="left btn btn-default" id="replyRegist">이미지 업로드?</button> -->
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-pencil'></span> 수정</button>
-                                        <button type="button" class="right btn btn-default" id="replyRegist"><span class='glyphicon glyphicon-remove'></span> 삭제</button>
-                                        
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
+                       
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-12"></div>
-                </div>
+
 
 
                 <div class="row">
@@ -411,6 +445,7 @@
         </div>
     </footer>
 
+    
     
     
 </body>

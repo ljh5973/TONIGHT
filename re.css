@@ -37,6 +37,10 @@ ul, li, dl, ol{
 }
 
 
+/* 백그라운드 */
+
+
+
 /* 웹폰트 */
 
 @font-face {
@@ -56,21 +60,35 @@ ul, li, dl, ol{
     src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
    }
 
+/* 로고 */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.header-logo a{
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+}
 
+/* 사이드바 서비스 */
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* 헤더영역 */
 
 
-.header-logo a{
-    font-family: 'KoreanFrenchTypewriter';
-}
+
 a:hover{
     text-decoration: none;
 }
 
 body{
+   
     margin: 0;
     background-color: white;
+    
+    
     
     
 }
@@ -355,7 +373,7 @@ header .header-user li a{
 
 
 
-/* side bar */
+/* side bar */ 
 input[id="menuicon"]{
     display:none;
 }
@@ -433,8 +451,45 @@ input[id="menuicon"]:checked+label{
     right: 250px;
 }
 
+.sidebar{
+    padding-left:15px ;
+}
+.sidebar-product{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar-img{
+    border: 1px solid #777;
+    height: 100px;
+    width: 45%;
+    margin: 2px 2px;
+}
+.sidebar-img a img{
+    width: 100%;
+    height: 100%;
+}
 
+.sidebar-service{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+.sidebar-service span{
+    display: block;
+    font-size: 50px;
+    font-family: 'BMJUA';
+}
 
+.sidebar-bottom{
+    display: flex;
+    margin: 100px auto;
+    justify-content: center;
+    justify-content: space-around;
+}
+.sidebar-bottom a i{
+    width: 30px;
+}
 
 
 
