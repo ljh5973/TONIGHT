@@ -1,7 +1,7 @@
-window.onload = function() {
-    drawMap('#korea');
-};
+$(document).ready(function(){
 
+    drawMap('#korea');
+});
 //지도 그리기
 function drawMap(target) {
     var width = 700; //지도의 넓이

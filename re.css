@@ -6,7 +6,7 @@
 }
 
 body, html{
-    font-family: 'Noto Sans KR', sans-serif;
+    
     width: 100%;
     min-width: 320px;
 
@@ -38,6 +38,14 @@ ul, li, dl, ol{
 
 
 /* 백그라운드 */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
 
 
 
@@ -160,7 +168,7 @@ header .header-user li a{
 }
 
 .header-button a:hover{
-    background-color:#612a18f1 ;
+    background-color:rgb(90,34,18);
 }
 
 .header-button a span{
@@ -174,11 +182,154 @@ header .header-user li a{
 
 .wide-search button{
     background-color:#5f1e09f1;
+    width: 30px;
+}
+.wide-search button i {
+    color: white;
 }
 
 
 
+/* side bar */ 
 
+input[id="menuicon"]{
+    display:none;
+}
+input[id="menuicon"] +label{
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[id="menuicon"]+label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #000;
+    transition: all .35s;
+}
+input[id="menuicon"]+label span:nth-child(1){
+    top: 0;
+}
+input[id="menuicon"]+label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3){
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked +label span:nth-child(1){
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label span:nth-child(2){
+    opacity: 0;
+    
+}input[id="menuicon"]:checked +label span:nth-child(3){
+    bottom: 50%;
+    transform:translateY(50%) rotate(-45deg);
+    
+}
+
+
+.sidebar{
+
+    width: 250px;
+    height: 100%;
+    background-color:white ;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 999;
+    transition: all .35s;
+
+}
+
+input[id="menuicon"]:checked+label+div{
+    right: 0;
+}
+
+input[id="menuicon"]+label{
+    display: block;
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    right: 0;
+    top:calc(50% - 25px);
+    transition:all .35s;
+    cursor:pointer;
+}
+input[id="menuicon"]:checked+label{
+    z-index: 2;
+    right: 250px;
+
+}
+
+
+
+.sidebar{
+    padding-left:15px ;
+}
+.sidebar-product{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar-img{
+    border: 1px solid #777;
+    height: 100px;
+    width: 45%;
+    margin: 2px 2px;
+}
+.sidebar-img a img{
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-service{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+.sidebar-service span{
+    display: block;
+    font-size: 50px;
+    font-family: 'BMJUA';
+}
+
+.sidebar-bottom{
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    justify-content: space-around;
+}
+.sidebar-bottom a i{
+    width: 30px;
+}
+
+.sidebar .idpwfind{
+    margin-top: 10px;
+
+}
+.sidebar .login-form{
+    margin-top: 10px;
+}
+
+
+@media(max-width:768px){
+
+ input[id="menuicon"]+label{
+     display: none;
+ }
+    .sidebar{
+        display: none;
+    }
+}
 
 
 
@@ -234,10 +385,6 @@ header .header-user li a{
         flex-direction: column;
         align-items: flex-start;
         padding:8px 15px;
-        
-        
-
-        
     }
     header .header-logo{
         padding-left: 20px;
@@ -371,125 +518,18 @@ header .header-user li a{
 }
 
 
+/* 메인 맵 */
 
-
-/* side bar */ 
-input[id="menuicon"]{
-    display:none;
-}
-input[id="menuicon"] +label{
-    display: block;
-    width: 60px;
-    height: 40px;
-    position: relative;
-    cursor: pointer;
-}
-
-input[id="menuicon"]+label span{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    border-radius: 30px;
-    background: #000;
-    transition: all .35s;
-}
-input[id="menuicon"]+label span:nth-child(1){
-    top: 0;
-}
-input[id="menuicon"]+label span:nth-child(2){
-    top: 50%;
-    transform: translateY(-50%);
-}
-input[id="menuicon"]+label span:nth-child(3){
-    bottom: 0;
-}
-
-input[id="menuicon"]:checked +label span:nth-child(1){
-    top: 50%;
-    transform:translateY(-50%) rotate(45deg);
-}
-input[id="menuicon"]:checked +label span:nth-child(2){
-    opacity: 0;
-    
-}input[id="menuicon"]:checked +label span:nth-child(3){
-    bottom: 50%;
-    transform:translateY(50%) rotate(-45deg);
-    
+.k-border{
+    border: 1px solid #888;
+    padding: 0;
+    margin: 5px 5px;
 }
 
 
-.sidebar{
 
-    width: 250px;
-    height: 100%;
-    background-color:white ;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    z-index: 1;
-    transition: all .35s;
 
-}
 
-input[id="menuicon"]:checked+label+div{
-    right: 0;
-}
-
-input[id="menuicon"]+label{
-    display: block;
-    width: 25px;
-    height: 20px;
-    position: fixed;
-    right: 0;
-    top:calc(50% - 25px);
-    transition:all .35s;
-    cursor:pointer;
-}
-input[id="menuicon"]:checked+label{
-    z-index: 2;
-    right: 250px;
-}
-
-.sidebar{
-    padding-left:15px ;
-}
-.sidebar-product{
-    display: flex;
-    flex-wrap: wrap;
-}
-.sidebar-img{
-    border: 1px solid #777;
-    height: 100px;
-    width: 45%;
-    margin: 2px 2px;
-}
-.sidebar-img a img{
-    width: 100%;
-    height: 100%;
-}
-
-.sidebar-service{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 50px;
-}
-.sidebar-service span{
-    display: block;
-    font-size: 50px;
-    font-family: 'BMJUA';
-}
-
-.sidebar-bottom{
-    display: flex;
-    margin: 100px auto;
-    justify-content: center;
-    justify-content: space-around;
-}
-.sidebar-bottom a i{
-    width: 30px;
-}
 
 
 

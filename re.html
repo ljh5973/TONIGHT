@@ -47,9 +47,11 @@
 
 
 <body>
-    <div class="background"></div>
     
     
+    <div class="overlay">
+
+    </div>
     
     <header>
     
@@ -107,8 +109,8 @@
     <section>
         <aside>
             
-            <input type="checkbox" id="menuicon">
-            <label for="menuicon">
+            <input type="checkbox" id="menuicon" class="menuicon">
+            <label for="menuicon" class="label-menuicon">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -119,6 +121,13 @@
                         <div class="row">
                             <div class="login-wrap">
                                 <div class="login-wrap2">
+                                   
+                                        <div class="sidebar-top">
+                                            <h2>로그인</h2>
+                                        </div>
+
+                                  
+                                    <hr>
                                     <div class="idpw">
                                         아이디<br/>
                                         <input type="text" class="id"><br/>
@@ -136,12 +145,13 @@
                                         <input type="checkbox">아이디 유지
                                     </div>
                                     <div class="idpwfind">
-                                        <hr/>
+                                        
                                         <button name="button">아이디 찾기</button>
                                         |
                                         <button name="button">비밀번호 찾기</button>
-                                        
+                                        |
                                         <button name="button" class="join">회원가입</button>
+                                        <hr>
                                     </div>
                                 </div>
                             </div>
@@ -173,6 +183,7 @@
                     <a href="#"><span>REVIEW</span></a>
                     <a href="#"><span>Q&A</span></a>
                 </div>
+                <hr>
                 <div class="sidebar-bottom">
                     <a href="#"><img src="img/facebook_sns.png" alt=""></a>
                     <a href="#"><img src="img/insta_sns.png" alt=""></a>
@@ -187,7 +198,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 topImg">
-                        <img src="img/bottles.webp">
+                        <img src="img/top7.jpg">
 
                     </div>
                 </div>
@@ -371,7 +382,17 @@
 
                 <div class="row">
                     <div class="col-xs-12">
-                        <div id="korea"></div>
+                        
+                        <div class="map-comment">
+                            <div class="brownline">
+
+                            </div>
+                            <h3>지역별 찾아보기</h3>
+                        </div>
+                        <div class="k-border">
+                            <div id="korea"></div>
+
+                        </div>
                         
                     </div>
                 </div>
