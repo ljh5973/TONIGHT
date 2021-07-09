@@ -88,31 +88,49 @@
     margin-bottom: 5px;
     font-weight: bolder;
 }
+
 .id-form, .birth-form {
     position: relative;
 }
+
 .add {
     margin-bottom: 5px;
+    position: static;
 }
 
+.find {
+    height: 15%;
+    top: 20px;
+    right: 1px;
+}
 
-.idCheck,.cal {
+.idCheck,.cal{
     float: right;
+    height: 50%;
 }
+
 .login {
     font-weight: bolder;
     font-size: 60px;
 }
 
-.idCheck, .cal {
+.idCheck, .cal, .idCheck {
     position: absolute;
     margin-left: -30px;
     border-collapse: collapse;
-    height: 50%;
     color: #5f1e09f1;
     background-color: rgb(240,220,220);
     border-color: rgb(240,220,220);
 }
+
+.find {
+    position: absolute;
+    border-collapse: collapse;
+    color: #5f1e09f1;
+    background-color: rgb(240,220,220);
+    border-color: rgb(240,220,220);
+}
+
 .joinbtn {
     float: right;
     height: 50%;

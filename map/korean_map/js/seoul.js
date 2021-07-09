@@ -14,7 +14,7 @@ var projection = d3.geo.mercator()
 
 var path = d3.geo.path().projection(projection);
 
-d3.json("seoul_municipalities_topo_simple.json", function(error, data) {
+d3.json("json/seoul_municipalities_topo_simple.json", function(error, data) {
     var features = topojson.feature(data, data.objects.seoul_municipalities_geo).features;
     
     map.selectAll("path")

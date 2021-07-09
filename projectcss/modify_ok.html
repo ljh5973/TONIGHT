@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+
 </head>
 <body>
 
@@ -115,6 +119,7 @@
                          <div class="col-sm-12 col-xs-12 add-form">
                              주소<br/>
                              <input type="text" class="add"><br/>
+                             <button type="button" onclick="openZipSearch()" class="find">찾기</button>
                              상세주소<br/>
                              <input type="text" class="add2">
                              <button type="button" class="joinbtn">수정완료</button>
@@ -130,7 +135,29 @@
         </div>
 
     </section>
-    
+
+    <script type="text/javascript">
+        function openZipSearch(){
+             new daum.Postcode({
+                    oncomplete: function(data) {
+                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                        // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+                        //jquery 소스코드
+                        $('[name=zipcode]').val(data.zonecode); // 우편번호 (5자리)
+
+                        $('[name=address1]').val(data.address);
+
+                        $('[name=address2]').val(data.buildingName);
+                        
+                        $('[name=address3]').val(data.addressEnglish);
+                        $('[name=address4]').val(data.bname);
+                    }
+                }).open();
+        }
+    </script>
+
+
+
     <footer>
         <div class="container">
             <div class="row">
