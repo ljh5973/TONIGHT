@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--압축되지 않은 파일-->
+    <!-- 부트스트랩 css파일 참조 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- 부트스트랩 테마파일 참조 -->
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+    <!-- 부트스트랩 js파일 참조 -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="re.css">
+
+    <!-- custom js -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">Tonight</a>
+        </div>
+    
+        <ul class="header-user">
+    
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+    
+    
+        
+        <div class="header-button">
+           
+            <div class="menu-button">
+                <a href="#"> <span>와인</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>맥주</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>위스키</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>브랜디</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>전통주</span></a>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row product-row">
+
+                <!-- side bar -->
+                <div class="col-md-3 product-left">
+                    <div class="product-search">
+                        <input type="text" class="form-control">
+                        <a href="" class="glyphicon glyphicon-search"></a>
+                    </div>
+
+                    <div class="product-category">
+                        <span>카테고리</span>
+                        <!-- <ul>
+                            <li class="subtype">
+                                <a href="#kinds" data-toggle="collapse">
+                                    <span>종류</span>
+                                    <span class="glyphicon glyphicon-chevron-down arrow-down right"></span>
+                                </a>
+                            </li>
+                            <ul id="kinds" class="collapse sub-content">
+                                <li><input type="checkbox" name="kinds"> 와인</li>
+                                <li><input type="checkbox" name="kinds"> 맥주</li>
+                                <li><input type="checkbox" name="kinds"> 위스키</li>
+                                <li><input type="checkbox" name="kinds"> 브랜디</li>
+                                <li><input type="checkbox" name="kinds"> 전통주</li>
+                            </ul>
+                        </ul> -->
+                        <ul>
+                            <li class="subtype">
+                                <a href="#kinds" data-toggle="collapse">종류</a>
+                                <a href="#kinds" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                            </li>
+                            <ul id="kinds" class="collapse sub-content">
+                                <li><input type="checkbox" name="kinds"> 와인</li>
+                                <li><input type="checkbox" name="kinds"> 맥주</li>
+                                <li><input type="checkbox" name="kinds"> 위스키</li>
+                                <li><input type="checkbox" name="kinds"> 브랜디</li>
+                                <li><input type="checkbox" name="kinds"> 전통주</li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li class="subtype">
+                                <a href="#alcont" data-toggle="collapse">도수</a>
+                                <a href="#alcont" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                            </li>
+                            <ul id="alcont" class="collapse sub-content">
+                                <li><input type="checkbox" name="alcont"> ~ 20%</li>
+                                <li><input type="checkbox" name="alcont"> ~ 30%</li>
+                                <li><input type="checkbox" name="alcont"> ~ 40%</li>
+                                <li><input type="checkbox" name="alcont"> ~ 50%</li>
+                                <li><input type="checkbox" name="alcont"> 50% ~ </li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li class="subtype">
+                                <a href="#age" data-toggle="collapse">나이</a>
+                                <a href="#age" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                            </li>
+                            <ul id="age" class="collapse sub-content">
+                                <li><input type="checkbox" name="age"> ~ 25</li>
+                                <li><input type="checkbox" name="age"> 26 ~ 35</li>
+                                <li><input type="checkbox" name="age"> 36 ~ 45</li>
+                                <li><input type="checkbox" name="age"> 46 ~ 55</li>
+                                <li><input type="checkbox" name="age"> 55 ~ </li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li class="subtype">
+                                <a href="#price" data-toggle="collapse">가격</a>
+                                <a href="#price" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                            </li>
+                            <ul id="price" class="collapse sub-content">
+                                <li><input type="checkbox" name="age"> 50,000~</li>
+                                <li><input type="checkbox" name="age"> 100,000~</li>
+                                <li><input type="checkbox" name="age"> 200,000~</li>
+                                <li><input type="checkbox" name="age"> 300,000~</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- product list -->
+                <ul class="col-md-9 product-right">
+                    <li class="col-xs-12 col-sm-6 col-md-4 product-li">
+                        <div class="product-img">
+                            <img src="img/dalmore-age12-giftset.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">달모어12년선물세트</div>
+                            <div class="product-content">고급달모어잔</div>
+                            <div class="product-price">148,000원</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/majesty-xo.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">마제스티X.O</div>
+                            <div class="product-content">명절추천상품</div>
+                            <div class="product-price">120,000 원</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/cat.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">CHE고영희EZE</div>
+                            <div class="product-content">CUTE</div>
+                            <div class="product-price">추정불가</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/dalmore-age12-giftset.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">달모어12년선물세트</div>
+                            <div class="product-content">고급달모어잔</div>
+                            <div class="product-price">148,000원</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/dalmore-age12-giftset.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">달모어12년선물세트</div>
+                            <div class="product-content">고급달모어잔</div>
+                            <div class="product-price">148,000원</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/majesty-xo.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">마제스티X.O</div>
+                            <div class="product-content">명절추천상품</div>
+                            <div class="product-price">120,000 원</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/cat.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">CHE고영희EZE</div>
+                            <div class="product-content">CUTE</div>
+                            <div class="product-price">추정불가</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="product-img">
+                            <img src="img/dalmore-age12-giftset.jpg" alt="사진입니다">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">달모어12년선물세트</div>
+                            <div class="product-content">고급달모어잔</div>
+                            <div class="product-price">148,000원</div>
+                        </div>
+                        <div class="product-detail-hover">
+                            <a href="proudct-detail.html"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-menu">
+                    <ul class="footer-menu-inner">
+                        <li><a href="#">TONIGHT</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">상품문의</a></li>
+                        <li><a href="#">Q&A</a></li>
+
+                    </ul>
+
+                </div>
+                
+                
+                
+                
+                <div>
+
+                    <div class="copyright">
+                        
+                        
+                        <span>
+                        회사명 : TONIGHT   사업자등록번호 : 123-01-12345   대표자 : 유기농   전화번호 : 031-111-2222  <br/>  
+                        주소 : 경기도   사이트명 : TONIGHT    담당자명 : 유기농 <br/>
+                          담당자휴대폰 : 010-1111-2222   담당자이메일 : uginong@uginong.com<br/>
+                        Copyright ⓒ TONIGHT All Right Reserved.
+                        </span>
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <a href="" class="productDetail-top"><span class="glyphicon glyphicon-menu-up"></span></a>
+
+    <script>
+        //top 버튼 조정
+        $(function() {
+            $(window).scroll(function() {
+                // console.log($(this).scrollTop());
+                if($(this).scrollTop() > 10) {
+                    $(".productDetail-top").fadeIn();
+                } else {
+                    $(".productDetail-top").fadeOut();
+                }
+            })
+
+            // 버튼 클릭 시
+            $(".productDetail-top").click(function() {
+                $('html, body').animate({
+                    scrollTop : 0
+                }, 400);
+                return false;
+            });
+        });
+
+        // 다른 카테고리 안보이게 처리
+        $(function() {
+            $(".subtype > a").click(function(e) {
+                console.log(e.target);
+            })
+        })
+    </script>
+
+</body>
+</html>

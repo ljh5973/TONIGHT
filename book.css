@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+html {
+  font: 700 3em/1 "Amatic SC", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+body {
+  background-color: #fcfcfc;
+  margin: 1em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  border: 0.125em solid #252525;
+  margin: 1em auto;
+  max-width: 16em;
+}
+.card:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+aside {
+  border-bottom: 0.125em solid #252525;
+}
+@media screen and (min-width: 45em) {
+  aside {
+    float: left;
+    width: 25%;
+    border-right: 0.125em solid #252525;
+    border-bottom: none;
+  }
+}
+
+abbr,
+logo {
+  width: 50%;
+  float: left;
+}
+@media screen and (min-width: 45em) {
+  abbr,
+logo {
+    float: none;
+    width: auto;
+  }
+}
+
+abbr {
+  display: block;
+  line-height: 3.375em;
+  border-right: 0.125em solid #252525;
+}
+abbr sup {
+  position: relative;
+  font-size: 0.675em;
+  top: -1em;
+}
+@media screen and (min-width: 45em) {
+  abbr {
+    border-right: none;
+    border-bottom: 0.125em solid #252525 !important;
+  }
+}
+
+.logo {
+  display: block;
+  line-height: 3.375em;
+}
+
+.name {
+  font-size: 2em;
+  padding: 0.75em 0.25em;
+}
+@media screen and (min-width: 45em) {
+  .name {
+    float: left;
+    width: 75%;
+  }
+}
+
+.occupation,
+.location {
+  padding: 0.375em 0.75em;
+  border-top: 0.125em solid #252525;
+  margin-top: 0.125em;
+  float: right;
+  width: 50%;
+}
+@media screen and (min-width: 45em) {
+  .occupation,
+.location {
+    width: 37.5%;
+  }
+}
+
+.occupation {
+  color: #fcfcfc;
+  background-color: #252525;
+}

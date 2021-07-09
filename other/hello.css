@@ -1,0 +1,10 @@
+.navbar{
+    background-color: black;
+}
+
+.collapse{
+    display: flex;
+}
+.navbar-nav{
+    align-content: flex-end;
+}

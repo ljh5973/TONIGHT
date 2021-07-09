@@ -1,0 +1,199 @@
+
+
+/* 1. 디자인 시작시 기본 선언 */
+
+
+
+body, html{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    min-width: 320px;
+
+}
+
+
+
+img{
+    max-width: 100%; /* 사이즈가 변했을 때 넓이를 유지 */
+    height: auto;   /* 넓이에 따라 높이가 변함 */
+   margin: 0 auto;
+
+}
+input, textarea, button, select{
+    -webkit-appearance: none;   /* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
+    -moz-appearance: none;
+    -o-appearance: none;
+
+}
+
+ul, li, dl, ol{
+    list-style: none; /* 순서 요소들의 리스트 스타일 제거 */
+}
+
+.body-section{
+    position: relative;
+    z-index: 1;
+}
+.header-button{
+    position: absolute;
+    z-index: 50;
+}
+
+.header-search{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+}
+
+
+
+/* 헤더부분 */
+
+.header-navbar{
+    display: flex;
+}
+.header-logo a img{
+
+    height: 70px;
+}
+
+.header-padding{
+    padding: 0 70px;
+}
+.header-categori{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.navbar-list{
+    display: flex;
+}
+.navbar-item{
+    margin: 0 8px;
+}
+.navbar-list li{
+    height: 100%;
+}
+.navbar-item-search{
+    margin-left: 15px;
+}
+
+.header-user{
+    display: flex;
+    align-items: center;
+    
+}
+.navbar-user{
+    display: flex;
+    
+
+}
+.navbar-user-item{
+    margin: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+/* 하단슬라이드 메뉴 */
+
+.header-button{
+    display: none;
+    width: 100%;
+    background-color:#5f1e09f1 ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 200px;
+    height: 70px;
+    opacity: 100;
+}
+.header-button > .menu-button{
+    height: 100%;
+}
+
+.header-button a {
+    color:white;
+    display: block;
+    height: 100%;
+}
+
+.header-button a:hover{
+    background-color:#612a18f1 ;
+}
+
+.header-button a span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 100%;
+}
+
+.header-button.active{
+    display: flex;
+}
+
+/* 헤더 서치메뉴 */
+.header-search{
+    display: none;
+    align-items: center;
+    height: 70px;
+    background-color:#5f1e09f1 ;
+}
+.header-search-container{
+    padding-left: 150px;
+    
+}
+.header-search-center{
+    display: flex;
+}
+.search-cancel{
+    padding-left: 50px;
+}
+
+.header-search.active{
+    display: flex;
+}
+
+
+/* 메인 탑 */
+.main-top{
+    background-color:rgb(238,224,219);
+    height: 500px;
+}
+.main-top-container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.main-top-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: white;
+    position: relative;
+    top: 3em;
+    width: 70%;
+
+}
+
+.main-top-left{
+    height: 400px;
+}
+.main-top-left img{
+    height: 300px;
+}
+
+.main-top-right{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+/* 메인 세컨드 */
+
+.main-second{
+    background-color:rgb(240, 223, 223) ;
+}
