@@ -263,6 +263,8 @@ a:hover, a:active, a:focus {
     bottom: 10px;
     color: white;
     opacity: 0.9;
+    display: none;
+    border: 2px solid ghostwhite;
 }
 
 .productDetail-top:hover {
@@ -278,28 +280,61 @@ a:hover, a:active, a:focus {
 
 /* product.html */
 /* 왼쪽 사이드 바 */
-.product-search, .product-category {
-    padding : 10px;
+.product-row {
+    height: auto;
+}
+
+.product-left {
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+    margin: 15px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
+    z-index: 100;
+}
+
+@media screen and (max-width: 991px) {
+    .product-left {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        z-index: 100;
+    }
 }
 
 .product-search {
     text-align: center;
+    padding: 30px 15px;
 }
 
 .product-search > input {
+    border: 2px solid #5f1e09f1;
     width: 85%;
     display: inline-block;
     margin-right: 10px;
 }
 
 .product-search > a {
-    /* color: #5f1e09f1; */
     font-size: 15px;
     font-weight: 600;
     cursor: hand;
 }
 
-.product-category span {
+.product-category {
+    padding : 15px;
+}
+
+/* .product-category > .subtype > a {
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-category > .subtype > a .rignt {
+    float: right;
+} */
+
+.product-category > span {
     display: block;
     border-bottom: 2px solid gainsboro;
     margin-bottom: 20px;
@@ -308,38 +343,32 @@ a:hover, a:active, a:focus {
     font-weight: 600;
 }
 
-.subtype {
+
+.product-category .subtype {
     background-color: #5f1e09f1;
     overflow: hidden;
     padding: 5px;
     border-radius: 20px;
 }
 
-.subtype a {
+.product-category .subtype a {
     color: #ffffff;
     float: left;
     padding-left: 10px;
 }
 
-.subtype .arrow-down {
+.product-category .subtype .arrow-down {
     float: right;
     padding-right: 10px;
     padding-top: 2px;
 }
 
-.sub-content {
+.product-category .sub-content {
+    padding-top: 10px;
     padding-left: 20px;
 }
 
 /* product */
-.product-left {
-    background-color: rgb(253,248,247);
-    border: 1px solid gainsboro;
-    margin: 15px 0;
-    position: sticky;
-    top: 15px;
-}
-
 .product-right > li {
     padding: 15px;
 }

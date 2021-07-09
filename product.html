@@ -85,7 +85,7 @@
 
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row product-row">
 
                 <!-- side bar -->
                 <div class="col-md-3 product-left">
@@ -96,26 +96,46 @@
 
                     <div class="product-category">
                         <span>카테고리</span>
+                        <!-- <ul>
+                            <li class="subtype">
+                                <a href="#kinds" data-toggle="collapse">
+                                    <span>종류</span>
+                                    <span class="glyphicon glyphicon-chevron-down arrow-down right"></span>
+                                </a>
+                            </li>
+                            <ul id="kinds" class="collapse sub-content">
+                                <li><input type="checkbox" name="kinds"> 와인</li>
+                                <li><input type="checkbox" name="kinds"> 맥주</li>
+                                <li><input type="checkbox" name="kinds"> 위스키</li>
+                                <li><input type="checkbox" name="kinds"> 브랜디</li>
+                                <li><input type="checkbox" name="kinds"> 전통주</li>
+                            </ul>
+                        </ul> -->
                         <ul>
                             <li class="subtype">
                                 <a href="#kinds" data-toggle="collapse">종류</a>
                                 <a href="#kinds" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
                             </li>
                             <ul id="kinds" class="collapse sub-content">
-                                <li><input type="checkbox" name="kinds"> 라거</li>
-                                <li><input type="checkbox" name="kinds"> 에일</li>
+                                <li><input type="checkbox" name="kinds"> 와인</li>
+                                <li><input type="checkbox" name="kinds"> 맥주</li>
+                                <li><input type="checkbox" name="kinds"> 위스키</li>
+                                <li><input type="checkbox" name="kinds"> 브랜디</li>
+                                <li><input type="checkbox" name="kinds"> 전통주</li>
                             </ul>
                         </ul>
 
                         <ul>
-                            <!-- 도수 : alcohol content -->
                             <li class="subtype">
                                 <a href="#alcont" data-toggle="collapse">도수</a>
                                 <a href="#alcont" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
                             </li>
                             <ul id="alcont" class="collapse sub-content">
-                                <li><input type="checkbox" name="alcont"> 10도 이하</li>
-                                <li><input type="checkbox" name="alcont"> 20도 이하</li>
+                                <li><input type="checkbox" name="alcont"> ~ 20%</li>
+                                <li><input type="checkbox" name="alcont"> ~ 30%</li>
+                                <li><input type="checkbox" name="alcont"> ~ 40%</li>
+                                <li><input type="checkbox" name="alcont"> ~ 50%</li>
+                                <li><input type="checkbox" name="alcont"> 50% ~ </li>
                             </ul>
                         </ul>
 
@@ -125,8 +145,11 @@
                                 <a href="#age" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
                             </li>
                             <ul id="age" class="collapse sub-content">
-                                <li><input type="checkbox" name="age"> 20대</li>
-                                <li><input type="checkbox" name="age"> 30대</li>
+                                <li><input type="checkbox" name="age"> ~ 25</li>
+                                <li><input type="checkbox" name="age"> 26 ~ 35</li>
+                                <li><input type="checkbox" name="age"> 36 ~ 45</li>
+                                <li><input type="checkbox" name="age"> 46 ~ 55</li>
+                                <li><input type="checkbox" name="age"> 55 ~ </li>
                             </ul>
                         </ul>
 
@@ -138,6 +161,8 @@
                             <ul id="price" class="collapse sub-content">
                                 <li><input type="checkbox" name="age"> 50,000~</li>
                                 <li><input type="checkbox" name="age"> 100,000~</li>
+                                <li><input type="checkbox" name="age"> 200,000~</li>
+                                <li><input type="checkbox" name="age"> 300,000~</li>
                             </ul>
                         </ul>
                     </div>
@@ -293,18 +318,35 @@
         </div>
     </footer>
 
-    <a href="javascript:window.scrollTo(0,0);" class="productDetail-top"><span class="glyphicon glyphicon-menu-up"></span></a>
+    <a href="" class="productDetail-top"><span class="glyphicon glyphicon-menu-up"></span></a>
 
     <script>
+        //top 버튼 조정
         $(function() {
+            $(window).scroll(function() {
+                // console.log($(this).scrollTop());
+                if($(this).scrollTop() > 10) {
+                    $(".productDetail-top").fadeIn();
+                } else {
+                    $(".productDetail-top").fadeOut();
+                }
+            })
 
+            // 버튼 클릭 시
             $(".productDetail-top").click(function() {
                 $('html, body').animate({
-                    scrollTop : 0 // 0까지 animation 이동
-                }, 400); // 속도 400
+                    scrollTop : 0
+                }, 400);
                 return false;
             });
         });
+
+        // 다른 카테고리 안보이게 처리
+        $(function() {
+            $(".subtype > a").click(function(e) {
+                console.log(e.target);
+            })
+        })
     </script>
 
 </body>
