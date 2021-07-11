@@ -1,5 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* 공통 디자인 */
+/* input type=text */
+.common-text {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.common-text > input {
+    /* border: 2px solid #5f1e09f1; */
+    width: 85%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.common-text > a {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: hand;
+}
+
+.common-text > input:focus {
+    border: 2px solid #5f1e09f1;
+    box-shadow: none;
+    background-color: rgb(253,248,247);
+}
+
+/* button */
+.common-btn {
+    overflow: hidden;
+}
+
+.common-btn button {
+    float: left;
+    width: 50%;
+    border-radius: 0px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    background-image: none; /* 버튼 그라디언트 지우기 */
+}
+
+.common-btn .right {
+    color: rgb(250,250,250);
+    background-color: #5f1e09f1;
+}
+
+.common-btn .right:hover {
+    color: white;
+    background-color: rgb(90,34,18);
+}
+
 /* 헤더영역 */
 .header-logo a{
     font-family: 'Lobster', cursive;
@@ -303,24 +354,6 @@ a:hover, a:active, a:focus {
     }
 }
 
-.product-search {
-    text-align: center;
-    padding: 30px 15px;
-}
-
-.product-search > input {
-    border: 2px solid #5f1e09f1;
-    width: 85%;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.product-search > a {
-    font-size: 15px;
-    font-weight: 600;
-    cursor: hand;
-}
-
 .product-category {
     padding : 15px;
 }
@@ -516,30 +549,6 @@ a:hover, a:active, a:focus {
     float: right;
     font-size: 30px;
     color: #5f1e09f1;
-}
-
-.productDetail-btn {
-    overflow: hidden;
-}
-
-.productDetail-btn button {
-    float: left;
-    width: 50%;
-    border-radius: 0px;
-    height: 70px;
-    font-size: 20px;
-    font-weight: 600;
-    background-image: none; /* 버튼 그라디언트 지우기 */
-}
-
-.productDetail-btn .right {
-    color: rgb(250,250,250);
-    background-color: #5f1e09f1;
-}
-
-.productDetail-btn .right:hover {
-    color: white;
-    background-color: rgb(90,34,18);
 }
 
 /* 버튼 영역 */
