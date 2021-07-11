@@ -1,112 +1,19 @@
-@font-face {
-    font-family: 'NanumBarunGothic';
-    font-style: normal;
-    font-weight: 400;
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
-   }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-   * {
-    font-family: 'NanumBarunGothic';
-}
-   @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    .header-logo a{
-    font-family: 'Lobster', cursive;
-    font-size: 70px;
+   /* 공통 디자인 */
+   /* input type=text */
+   .id:focus, .pw:focus, .pwCheck:focus, .birth:focus, .add:focus, .add2:focus {
+       box-shadow: none;
+       border: 3px solid #5f1e09f1;
+    background-color: rgb(253,248,247);
 }
 
-body, html{
-    font-family: 'Noto Sans KR', sans-serif;
-    width: 100%;
-    min-width: 320px;
-}
-img{
-    max-width: 100%; /* 사이즈가 변했을 때 넓이를 유지 */
-    height: auto;   /* 넓이에 따라 높이가 변함 */
-   margin: 0 auto;
-
-}
-textarea, button, select{
-    -webkit-appearance: none;   /* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
-    -moz-appearance: none;
-    -o-appearance: none;
-}
-section {
-    background-color: rgb(250,250,250);
-}
-
-.join {
-    margin: 0 auto;
-    height: 600px;
-}
-.join-wrap{
-    margin: 0 auto;
-    display: inline-block;
-    overflow: hidden;
-    width: 30%;
-    margin-left: 35%;
-    height: 100%;
-    padding-top: 2%;
-}
-
-.id,.pw,.pwCheck,.birth,.add,.add2 {
-    width: 100%;
-    height: 50%;
-    border: 3px solid rgb(240,220,220);
-}
-.id-form,.pw-form,.pwCheck-form,.birth-form,.add-form{
-    width: 100%;
-    text-align: left;
-    padding: 0;
-    height: 15%;
-    margin-bottom: 5px;
-    font-weight: bolder;
-}
-.id-form, .birth-form {
-    position: relative;
-}
-.add {
-    margin-bottom: 5px;
-}
-
-
-.idCheck,.cal {
-    float: right;
-}
-.login {
-    font-weight: bolder;
-    font-size: 60px;
-}
-
-.idCheck, .cal {
-    position: absolute;
-    margin-left: -41px;
-    border-collapse: collapse;
-    height: 50%;
-    color: #5f1e09f1;
-    background-color: rgb(240,220,220);
-    border-color: rgb(240,220,220);
-}
-.joinbtn {
-    float: right;
-    height: 50%;
-    width: 100%;
-    margin-top: 30px;
-    color: #5f1e09f1;
-    background-color: rgb(240,220,220);
-    box-shadow: none;
-    border-color: rgb(240,220,220);
-}
-
-.img-form {
-    text-align: center;
-}
+  
 
 /* 헤더영역 */
-
-
 .header-logo a{
-    font-family: 'KoreanFrenchTypewriter';
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
 }
 a:hover{
     text-decoration: none;
@@ -115,8 +22,6 @@ a:hover{
 body{
     margin: 0;
     background-color: white;
-    
-    
 }
 
 .header-logo a{
@@ -139,13 +44,10 @@ header .header-logo{
     font-size: 30px;
     color: white;
     padding-left: 90px;
-    
-
 }
 
 header .header-user{
     display: flex;
-    
 }
 
 header .header-user li {
@@ -164,6 +66,37 @@ header .header-user li a{
     width: 100%;
     height: 400px;
 
+}
+
+.header-button{
+    display: flex;
+    width: 100%;
+    background-color:#5f1e09f1 ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 200px;
+    height: 70px;
+}
+.header-button > .menu-button{
+    height: 100%;
+}
+
+.header-button a {
+    color:white;
+    display: block;
+    height: 100%;
+}
+
+.header-button a:hover{
+    background-color:#612a18f1 ;
+}
+
+.header-button a span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 100%;
 }
 
 
@@ -271,9 +204,6 @@ header .header-user li a{
 }
 
 
-
-
-
 /* footer */
 
 footer{
@@ -284,11 +214,6 @@ footer{
     color: wheat;
     display: flex;
     height: 150px;
-  
-    
-
-    
-
 }
 .footer-container{
     width: 100%;
@@ -312,3 +237,109 @@ footer .footer-menu > li > a{
   text-align: center;
     
 }
+
+/* 기본 설정 */
+* {
+    margin : 0;
+    padding : 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-section {
+    margin-top: 15px;
+}
+
+
+
+/* join css */
+body, html{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    min-width: 320px;
+}
+img{
+    max-width: 100%; /* 사이즈가 변했을 때 넓이를 유지 */
+    height: auto;   /* 넓이에 따라 높이가 변함 */
+   margin: 0 auto;
+
+}
+textarea, button, select{
+    -webkit-appearance: none;   /* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
+    -moz-appearance: none;
+    -o-appearance: none;
+}
+section {
+    background-color: rgb(250,250,250);
+}
+
+.join {
+    margin: 0 auto;
+    height: 700px;
+}
+.join-wrap{
+    margin: 0 auto;
+    display: inline-block;
+    overflow: hidden;
+    width: 30%;
+    margin-left: 35%;
+    height: 100%;
+    padding-top: 2%;
+}
+
+.id,.pw,.pwCheck,.birth,.add,.add2 {
+    width: 100%;
+    height: 50%;
+    border: 3px solid rgb(240,220,220);
+}
+.id-form,.pw-form,.pwCheck-form,.birth-form,.add-form{
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    height: 15%;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.add {
+    margin-bottom: 5px;
+}
+
+
+.login {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+#idCheck, .cal {
+    margin-top: 2px;
+    height: 45%;
+    width: 15%;
+    color: #5f1e09f1;
+    background-color: rgb(240,220,220);
+    position: absolute;
+    border-color: rgb(240,220,220);
+    margin-left: -50px;
+}
+.joinbtn {
+    float: left;
+    height: 50%;
+    width: 100%;
+    margin-top: 30px;
+    color: #5f1e09f1;
+    background-color: rgb(240,220,220);
+    border-color: rgb(240,220,220);
+}
+
+.img-form {
+    text-align: center;
+}
+

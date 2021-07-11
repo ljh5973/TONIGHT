@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <script src="js/bootstrap.js"></script>
 <!--부트스트랩 css파일참조-->
     <link rel="stylesheet" href="css/bootstrap.css">
     
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     
-    <script src="js/bootstrap.js"></script>
 
     <link rel="stylesheet" href="css/join.css">
 
@@ -57,27 +57,28 @@
                        <div class="col-sm-12 col-xs-12 join-wrap">
                            <div class="col-sm-12 col-xs-12 id-form">
                                아이디<br/>
-                               <input type="text" class="id">
-                               <button type="button" class="idCheck">중복</button>
+                               <input type="text" class="form-control id" placeholder="아이디는 4~8글자" style="display:inline-block">
+                               <button type="button" id="idCheck">중복</button>
                             </div>
                             <div class="col-sm-12 col-xs-12 pw-form">
                                 비밀번호<br/>
-                                <input type="password" class="pw">
+                                <input type="password" class="form-control pw">
                             </div>
                             <div class="col-sm-12 col-xs-12 pwCheck-form">
                                 비밀번호 확인<br/>
-                                <input type="password" class="pwCheck">
+                                <input type="password" class="form-control pwCheck">
+                                <span class="pwMsg"></span>
                             </div>
                             <div class="col-sm-12 col-xs-12 birth-form">
                                 생년월일<br/>
-                                <input type="text" class="birth">
+                                <input type="text" class="form-control birth" style="display:inline-block">
                                 <button type="button" class="cal">달력</button>
                             </div>
                             <div class="col-sm-12 col-xs-12 add-form">
                                 주소<br/>
-                                <input type="text" class="add"><br/>
+                                <input type="text" class="form-control add"><br/>
                                 상세주소<br/>
-                                <input type="text" class="add2">
+                                <input type="text" class="form-control add2">
                                 <button type="button" class="joinbtn">회원가입</button>
                             </div>
                             
@@ -85,9 +86,42 @@
                     </div>
                 </div>
             </div>
-            
         </div>
         </section>
+
+
+        <script>
+            var idCheck = document.getElementById("idCheck");
+            var id = document.getElementsByClassName("id");
+
+            // console.log(id);
+            // console.log(idCheck);
+
+            idCheck.onclick = function() {
+
+                console.log(id[0]);
+
+                window.open("04.popup.html", "팝업창", "width=500 , height=300");
+            }
+
+            var pw = document.querySelector(".pw");
+            var pwCheck = document.querySelector(".pwCheck");
+            var pwMsg = document.querySelector(".pwMsg");
+
+            console.log(pw,pwCheck);
+
+            pwCheck.onkeyup = function() {
+
+                if(pw.value === pwCheck.value) {
+                    pwCheck.style.borderColor = "green";
+                    pwMsg.innerHTML = "비밀번호와 같습니다.";
+                } else {
+                    pwCheck.style.borderColor = "Red";
+                    pwMsg.innerHTML = "";
+                }
+            }
+
+        </script>
 
         <footer>
             <div class="container">
@@ -127,6 +161,7 @@
     
             </div>
         </footer>
+
     
     
 </body>
