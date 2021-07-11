@@ -73,3 +73,18 @@ height : 100em;
 > 참고 : https://penguingoon.tistory.com/259
 
 ## 제품 페이지의 카테고리에서 하나의 카테고리를 열면 다른 카테고리는 모두 닫히는 기능 추가
+   
+21.07.11
+## float 자세히 알아보기
+* css에서 정렬하기 위해 사용되는 속성
+* float이 적용된 요소를 A라고 한다면,
+* A는 A가 갖고 있는 내용만큼의 크기만큼의 공간만 차지하고 왼쪽으로 정렬된다
+	* 이때 A가 block 요소라면 inline처럼 움직이는 것처럼 보인다
+
+### 특징
+* position 속성의 absolute 값과 양립할 수 없다
+
+### clear 속성
+* float 속성의 영향을 받지 않게 한다
+* clear : left(right); 또는 clear : both; 로 사용되는데
+	* both라고 하면 모든 float 속성의 영향을 받지 않는다
