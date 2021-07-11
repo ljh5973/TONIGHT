@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+
+   * {
+    font-family: 'NanumBarunGothic';
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.modify-row > .modify-left > .modify-hover > div,
+.modify-row > .modify-left > .modify > div  {
+    display: block;
+    text-align: left;
+    font-size: larger;
+    overflow: hidden;
+    color: #777;
+}
+
+.modify-row > .modify-left > .modify-hover,
+.modify-row > .modify-left > .modify {
+
+    align-items: center;
+        display: flex;
+        border-radius: 0 50px 50px 0;
+        padding: 10px 16px 10px 24px;
+        position: relative;
+
+}
+
+.modify-row > .modify-left > .modify-hover:hover {
+    background-color: bisque;
+}
+
+.modify-row > .modify-left > .modify {
+    background-color: bisque;
+}
+
+.modify-left {
+    box-sizing: border-box;;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.modify-row {
+    padding-bottom: 150px;
+}
+
+
+.modify-right {
+    padding-top: 30px;
+    padding-bottom: 400px;
+}
+
+.modify-right > p {
+    font-size: revert;
+    font-weight: bold;
+}
+

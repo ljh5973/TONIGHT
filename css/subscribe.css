@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+
+   * {
+    font-family: 'NanumBarunGothic';
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.subscribe-row > .subscribe-left > .subscribe-hover > div,
+.subscribe-row > .subscribe-left > .subscribe > div {
+    display: block;
+    text-align: left;
+    font-size: larger;
+    overflow: hidden;
+    color: #777;
+}
+
+.subscribe-row > .subscribe-left > .subscribe-hover,
+.subscribe-row > .subscribe-left > .subscribe {
+
+    align-items: center;
+        display: flex;
+        border-radius: 0 50px 50px 0;
+        padding: 10px 16px 10px 24px;
+        position: relative;
+
+}
+
+.subscribe-row > .subscribe-left > .subscribe-hover:hover,
+.subscribe-row > .subscribe-left > .subscribe {
+    background-color: bisque;
+}
+
+.subscribe-left {
+    box-sizing: border-box;;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.subscribe-left > p {
+    margin-top: 20px;
+}
+
+.subscribe-right {
+    /* border: #777 solid 1px; */
+    box-sizing: border-box;
+    float: right;
+    padding-top: 20px;
+}
+
+.subscribe-right > h2 {
+    text-align: left;
+}
+
+.subscribe-right > .subscribe-h2 {
+    margin-top: 50px;
+}
+
+.subscribe-sub {
+    /* border: #777 solid 1px; */
+    background-color: rgb(240, 220, 220);
+    margin-bottom: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding : 5px;
+}
+
+/* .mypage-im , .mypage-info {
+    float: left;
+
+} */
+
+.subscribe-sub > .subscribe-info {
+    border: #777 solid 1px;
+}
+ 
+
+.subscribe-sub > .subscribe-im > img {
+    background-size: contain;
+    width: 170px;
+    border-radius: 5px;
+}
+
+.subscribe-btn {
+
+    /* float: right; */
+    overflow: hidden;
+    
+}
+
+.subscribe-btn > .subscribe-extention >button
+{
+    background:#5f1e09f1;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 10px 30px;
+  position: relative;
+  text-transform: uppercase;
+  width: 150px;
+  margin-bottom: 5px;
+  float: right;
+
+}
+
+.subscribe-btn > .subscribe-cancle >button {
+    background:rgb(250, 250, 250);
+    border: 3px solid #777;
+    border-radius: 5px;
+    color: #777;
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 10px 30px;
+    position: relative;
+    text-transform: uppercase;
+    width: 150px;
+    float: right;
+}
+
+.subscribe-btn > .subscribe-extention >button:hover {
+    background-color: rgb(90, 34, 18);
+}
+
+.subscribe-row {
+    padding-bottom: 150px;
+}

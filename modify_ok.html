@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--부트스트랩 css파일참조-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/modify_ok.css">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+
+</head>
+<body>
+
+    <header>
+
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">Tonight</a>
+        </div>
+    
+        <ul class="header-user">
+    
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+    
+    
+        
+        <div class="header-button">
+           
+            <div class="menu-button">
+                <a href="#"> <span>와인</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>맥주</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>위스키</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>브랜디</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>전통주</span></a>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="modify_ok-container">
+            <div class="modify_ok-row" >
+                <div class="col-md-3 col-sm-12 col-xs-12 modify_ok-left">
+                    <a href="mypage.html" class="modify_ok-hover">
+                        <div>내정보 </div>
+                    </a>
+                    <a href="subscribe.html" class="modify_ok-hover">
+                        <div>구독정보 & 장바구니</div>
+                    </a>
+                    <a href="modify.html" class="modify_ok">
+                        <div>회원정보수정</div>
+                    </a>
+                    <a href="withdraw.html" class="modify_ok-hover">
+                        <div>회원탈퇴</div>
+                    </a>
+            </div>
+
+            <div class="col-md-8 col-sm-12 col-xs-12 modify_ok-right">
+                <div class="join">
+                    <div class="col-sm-12 col-xs-12 join-wrap">
+                        <div class="col-sm-12 col-xs-12 id-form">
+                            아이디<br/>
+                            <input readonly class="id">
+                         </div>
+                         <div class="col-sm-12 col-xs-12 pw-form">
+                             비밀번호<br/>
+                             <input type="password" class="pw">
+                         </div>
+                         <div class="col-sm-12 col-xs-12 pwCheck-form">
+                             비밀번호 확인<br/>
+                             <input type="password" class="pwCheck">
+                         </div>
+                         <div class="col-sm-12 col-xs-12 birth-form">
+                             생년월일<br/>
+                             <input type="text" class="birth">
+                             <button type="button" class="cal">달력</button>
+                         </div>
+                         <div class="col-sm-12 col-xs-12 add-form">
+                             주소<br/>
+                             <input type="text" class="add"><br/>
+                             <button type="button" onclick="openZipSearch()" class="find">찾기</button>
+                             상세주소<br/>
+                             <input type="text" class="add2">
+                             <button type="button" class="joinbtn">수정완료</button>
+                         </div>
+                         
+                     </div>
+                 </div>
+             </div>
+            </div>
+                        
+
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        function openZipSearch(){
+             new daum.Postcode({
+                    oncomplete: function(data) {
+                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                        // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+                        //jquery 소스코드
+                        $('[name=zipcode]').val(data.zonecode); // 우편번호 (5자리)
+
+                        $('[name=address1]').val(data.address);
+
+                        $('[name=address2]').val(data.buildingName);
+                        
+                        $('[name=address3]').val(data.addressEnglish);
+                        $('[name=address4]').val(data.bname);
+                    }
+                }).open();
+        }
+    </script>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-menu">
+                    <ul class="footer-menu-inner">
+                        <li><a href="#">TONIGHT</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">상품문의</a></li>
+                        <li><a href="#">Q&A</a></li>
+
+                    </ul>
+
+                </div>
+                
+                
+                
+                
+                <div>
+
+                    <div class="copyright">
+                        
+                        
+                        <span>
+                        회사명 : TONIGHT   사업자등록번호 : 123-01-12345   대표자 : 유기농   전화번호 : 031-111-2222  <br/>  
+                        주소 : 경기도   사이트명 : TONIGHT    담당자명 : 유기농 <br/>
+                          담당자휴대폰 : 010-1111-2222   담당자이메일 : uginong@uginong.com<br/>
+                        Copyright ⓒ TONIGHT All Right Reserved.
+                        </span>
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+</body>
+</html>
