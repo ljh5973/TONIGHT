@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+   /* 공통 디자인 */
+   /* input type=text */
+   .common-text:focus {
+       border: 2px solid #5f1e09f1;
+       box-shadow: none;
+       background-color: rgb(253,248,247);
+   }
+   
+   /* button */
+   .common-btn button {
+       border-radius: 0px;
+       background-image: none; /* 버튼 그라디언트 지우기 */
+   }
+   
+   .common-btn .right {
+       color: rgb(250,250,250);
+       background-color: #5f1e09f1;
+   }
+   
+   .common-btn .right:hover {
+       color: white;
+       background-color: rgb(90,34,18);
+   }
+
+/* 헤더영역 */
+.header-logo a{
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    background-color: white;
+}
+
+.header-logo a{
+    color: rgb(238,224,219);
+
+}
+
+ header{
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: black;
+     
+     flex-direction: row;
+     flex-wrap: wrap;
+    
+
+ }
+header .header-logo{
+    font-size: 30px;
+    color: white;
+    padding-left: 90px;
+}
+
+header .header-user{
+    display: flex;
+}
+
+header .header-user li {
+    padding: 8px 12px;
+    
+}
+
+header .header-user li a{
+    color: white;
+}
+
+
+
+.main-wide img{
+    
+    width: 100%;
+    height: 400px;
+
+}
+
+.header-button{
+    display: flex;
+    width: 100%;
+    background-color:#5f1e09f1 ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 200px;
+    height: 70px;
+}
+.header-button > .menu-button{
+    height: 100%;
+}
+
+.header-button a {
+    color:white;
+    display: block;
+    height: 100%;
+}
+
+.header-button a:hover{
+    background-color:#612a18f1 ;
+}
+
+.header-button a span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 100%;
+}
+
+
+.wide-search button{
+    background-color:#5f1e09f1;
+}
+
+
+
+
+
+
+
+/* 햄버거버튼 */
+.ham-container{
+    position: absolute;
+    top: 15px;
+    right: 9px;
+}
+.hamBtn{
+    position: relative;
+    transition: .35 ease-in-out;
+    width: 25px;
+    height: 19px;
+    display: none;
+    right: 9px;
+}
+.hamBtn span{
+    position: absolute;
+    height: 6px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #3d4146;
+    top: 0;
+    transition: 0.2s;
+    
+
+}
+
+.hamBtn span:nth-child(1){
+    top: 0;
+}
+.hamBtn span:nth-child(2),
+.hamBtn span:nth-child(3){
+    top: 10px;
+}
+.hamBtn span:nth-child(4){
+    top: 20px;
+}
+
+.hamBtn.active span:nth-child(1),
+.hamBtn.active span:nth-child(4){
+    opacity: 0;
+}
+.hamBtn.active span:nth-child(2){
+    transform:rotate(45deg);
+}
+.hamBtn.active span:nth-child(3){
+    transform:rotate(-45deg);
+}
+@media(max-width:768px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding:8px 15px;
+        
+        
+
+        
+    }
+    header .header-logo{
+        padding-left: 20px;
+    }
+
+    header .header-user{
+ 
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 5px;
+        transition: .35 ease-in-out;
+
+    }
+    header .header-user li{
+        width: 15%;
+        
+        align-self: flex-end;
+       
+    }
+    header .header-user li a{
+        justify-content: flex-end;
+        display: flex;
+        
+    }
+    .hamBtn{
+        display: block;
+    }
+    header .header-user.active{
+        display:flex;
+        
+    }
+  
+    
+}
+
+
+/* footer */
+
+footer{
+    padding: 0;
+    margin-top: 50px;
+    background-color: #5f1e09f1;
+    width: 100%;
+    color: wheat;
+    display: flex;
+    height: 150px;
+}
+.footer-container{
+    width: 100%;
+}
+
+footer .footer-menu > .footer-menu-inner li{
+    display: inline-block;
+    border-left: solid 1px #777;
+}
+
+footer .footer-menu{
+    background-color:#3f1709f1 ;
+}
+
+footer .footer-menu > li > a{
+    display: block;
+    padding: 0px 15px;
+    
+}
+.copyright{
+  text-align: center;
+    
+}
+
+/* 기본 설정 */
+* {
+    margin : 0;
+    padding : 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-section {
+    margin-top: 15px;
+}
+
+
+/* mainlogin css */
+
+body, html{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    min-width: 320px;
+}
+
+textarea, button, select{
+    -webkit-appearance: none;   /* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
+    -moz-appearance: none;
+    -o-appearance: none;
+}
+
+section{
+    background-color: rgb(250,250,250);
+}
+.container, .row {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.login-form{
+    text-align: center;
+    height: 500px;
+    padding: 0;
+    width: 100%;
+}
+.login-btn {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    height: 80%;
+    padding-top: 140px;
+}
+
+a:hover{
+    color: #5f1e09f1;
+}
+.loginbtnclick, #custom-login-btn > img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 30%;
+}
+.loginbtnclick {
+    font-size: 45px;
+    background-color: #5f1e09f1;
+    margin-bottom: 30px;
+    color: rgb(250,250,250);
+    text-decoration: none;
+}
+#tonight-loginbtn {
+    height: 100%;
+}
+
+

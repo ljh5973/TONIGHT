@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/bootstrap.js"></script>
+<!--부트스트랩 css파일참조-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+
+    <link rel="stylesheet" href="css/join.css">
+
+    
+
+</head>
+<body>
+    
+    <header>
+
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">TONIGHT</a>
+        </div>
+    
+        <ul class="header-user">
+    
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>         
+            
+        </div>
+        
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <section>
+       <div>
+           <div class="container">
+               <div class="row">
+                   <div class="join">
+                       <div class="col-sm-12 col-xs-12 join-wrap">
+                           <div class="col-sm-12 col-xs-12 id-form">
+                               아이디<br/>
+                               <input type="text" class="form-control id" placeholder="아이디는 4~8글자" style="display:inline-block">
+                               <button type="button" id="idCheck">중복</button>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 pw-form">
+                                비밀번호<br/>
+                                <input type="password" class="form-control pw">
+                            </div>
+                            <div class="col-sm-12 col-xs-12 pwCheck-form">
+                                비밀번호 확인<br/>
+                                <input type="password" class="form-control pwCheck">
+                                <span class="pwMsg"></span>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 birth-form">
+                                생년월일<br/>
+                                <input type="text" class="form-control birth" style="display:inline-block">
+                                <button type="button" class="cal">달력</button>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 add-form">
+                                주소<br/>
+                                <input type="text" class="form-control add"><br/>
+                                상세주소<br/>
+                                <input type="text" class="form-control add2">
+                                <button type="button" class="joinbtn">회원가입</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+        <script>
+            var idCheck = document.getElementById("idCheck");
+            var id = document.getElementsByClassName("id");
+
+            // console.log(id);
+            // console.log(idCheck);
+
+            idCheck.onclick = function() {
+
+                console.log(id[0]);
+
+                window.open("04.popup.html", "팝업창", "width=500 , height=300");
+            }
+
+            var pw = document.querySelector(".pw");
+            var pwCheck = document.querySelector(".pwCheck");
+            var pwMsg = document.querySelector(".pwMsg");
+
+            console.log(pw,pwCheck);
+
+            pwCheck.onkeyup = function() {
+
+                if(pw.value === pwCheck.value) {
+                    pwCheck.style.borderColor = "green";
+                    pwMsg.innerHTML = "비밀번호와 같습니다.";
+                } else {
+                    pwCheck.style.borderColor = "Red";
+                    pwMsg.innerHTML = "";
+                }
+            }
+
+        </script>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+    
+                    <div class="footer-menu">
+                        <ul class="footer-menu-inner">
+                            <li><a href="#">TONIGHT</a></li>
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">상품문의</a></li>
+                            <li><a href="#">Q&A</a></li>
+    
+                        </ul>
+    
+                    </div>
+                    
+                    
+                    
+                    
+                    <div>
+    
+                        <div class="copyright">
+                            
+                            
+                            <span>
+                            회사명 : TONIGHT   사업자등록번호 : 123-01-12345   대표자 : 유기농   전화번호 : 031-111-2222  <br/>  
+                            주소 : 경기도   사이트명 : TONIGHT    담당자명 : 유기농 <br/>
+                              담당자휴대폰 : 010-1111-2222   담당자이메일 : uginong@uginong.com<br/>
+                            Copyright ⓒ TONIGHT All Right Reserved.
+                            </span>
+                           
+    
+                            
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
+
+    
+    
+</body>
+</html>

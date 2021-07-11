@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/mainlogin.css">
+    <!--카카오 SDK로드-->
+    <script src="js/kakao.js"></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">TONIGHT</a>
+        </div>
+    
+        <ul class="header-user">
+
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 login-form">
+                    <div class="login-btn">
+                        <a class="loginbtnclick" href="#">
+                            <div id="tonight-loginbtn">
+                                TONIGHT 로그인
+                            </div>
+                        </a>
+                        <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                            <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-menu">
+                    <ul class="footer-menu-inner">
+                        <li><a href="#">TONIGHT</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">상품문의</a></li>
+                        <li><a href="#">Q&A</a></li>
+
+                    </ul>
+
+                </div>
+                
+                
+                
+                
+                <div>
+
+                    <div class="copyright">
+                        
+                        
+                        <span>
+                        회사명 : TONIGHT   사업자등록번호 : 123-01-12345   대표자 : 유기농   전화번호 : 031-111-2222  <br/>  
+                        주소 : 경기도   사이트명 : TONIGHT    담당자명 : 유기농 <br/>
+                          담당자휴대폰 : 010-1111-2222   담당자이메일 : uginong@uginong.com<br/>
+                        Copyright ⓒ TONIGHT All Right Reserved.
+                        </span>
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+        
+        <script>
+            Kakao.init('ed86fb26609dd550694d3504b3a475f8');
+            Kakao.isInitialized();
+            
+            function loginWithKakao() {
+                Kakao.Auth.login({
+                    success: function(authObj) {
+                        console.log(authObj);
+                        Kakao.Auth.setAccessToken(authObj.access_token);
+                        
+                        getInfo(); 
+                    },
+                    fail: function (err) {
+                        console.log(err);
+                    },
+                })
+            }
+            
+            function getInfo() {
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function (res) {
+                        console.log(res);
+                        
+                        var email = res.kakao_account.email;
+                        var gender = res.kakao_account.gender;
+                        var nick = res.kakao_account.profile.nickname;
+                        var profile_img = res.kakao_account.profile.thumbnail_image_url;
+
+                        console.log(email, gender, nick, profile_img);
+                    },
+                    fail: function (error) {
+                        alert( '카카오 로그인에 실패했습니다.' + JSON.stringify(error) )
+                    },
+                })
+            }
+
+        
+     
+    </script>
+</body>
+</html>
