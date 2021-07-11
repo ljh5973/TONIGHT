@@ -21,7 +21,7 @@ function drawMap(target) {
         .translate(projection.translate())
         .scale(projection.scale())
         .scaleExtent([height, 800 * height])
-        .on('zoom', zoom);
+        // .on('zoom', zoom); //이거하면 스케일조정됨
 
     var svg = d3
         .select(target)
