@@ -39,8 +39,9 @@ body, html{
     min-width: 320px;
 }
 
-input, textarea, button, select{
-    -webkit-appearance: none;   /* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
+/* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
+textarea, button, select{
+    -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
 
