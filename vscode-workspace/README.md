@@ -1,10 +1,10 @@
-# TONIGHT - jiyoung branch
+# Tonight - jiyoung branch
    
 21.07.07
 ## 사진 크기를 줄이지 않고 div 안에 가로 or 세로 정렬하기
 
-   
-21.07.08
+
+21.07.08   
 ## top으로 가는 scroll 버튼 만들기
 * window : 창 크기에 따라 크기 값이 변경된다
 * 즉, 스크롤에 의해 보이지 않는 영역은 포함되지 않는다.
@@ -29,7 +29,8 @@ $(".productDetail-top").click(function() {
 	return false;
 });
 ```
-
+   
+   
 ## 스크롤을 내리면 따라다니는 사이드 바
 
 ### position : sticky 사용
@@ -58,6 +59,7 @@ height : 100em;
 * z-index 속성은 position : static; 이 **아닌** 경우에만 사용할 수 있다.
 
    
+     
 21.07.09
 ## 제품 상세화면에서 댓글에 무한 스크롤 기능 추가하기
 ### 화면 높이를 알 수 있는 다양한 속성들
@@ -71,7 +73,8 @@ height : 100em;
 * 상위 div 선택자를 가져와 자식으로 새 div를 추가한다
 
 > 참고 : https://penguingoon.tistory.com/259
-
+     
+     
 ## 제품 페이지의 카테고리에서 하나의 카테고리를 열면 다른 카테고리는 모두 닫히는 기능 추가
    
 21.07.11
