@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* 기본 설정 */
+* {
+    margin : 0;
+    padding : 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-section {
+    margin-top: 15px;
+}
+
+/* 공통 디자인 */
+/* input type=text */
+.common-text:focus, .common-textarea:focus {
+    border: 2px solid #5f1e09f1;
+    box-shadow: none;
+    background-color: rgb(253,248,247);
+}
+
+/* button */
+.common-btn button {
+    border-radius: 0px;
+    background-image: none; /* 버튼 그라디언트 지우기 */
+}
+
+.common-btn .right {
+    color: rgb(250,250,250);
+    background-color: #5f1e09f1;
+}
+
+.common-btn .right:hover {
+    color: white;
+    background-color: rgb(90,34,18);
+}
+
 /* 헤더영역 */
 .header-logo a{
     font-family: 'Lobster', cursive;
@@ -228,26 +272,6 @@ footer .footer-menu > li > a{
     
 }
 
-/* 기본 설정 */
-* {
-    margin : 0;
-    padding : 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-a {
-    color: black;
-}
-a:hover, a:active, a:focus {
-    text-decoration: none;
-    color: #000000;
-}
-
-.product-section {
-    margin-top: 15px;
-}
-
 /* top 버튼 */
 .productDetail-top {
     display: block;
@@ -303,16 +327,20 @@ a:hover, a:active, a:focus {
     }
 }
 
+
 .product-search {
     text-align: center;
-    padding: 30px 15px;
+    padding: 30px 0px;
 }
 
 .product-search > input {
-    border: 2px solid #5f1e09f1;
-    width: 85%;
+    width: 80%;
     display: inline-block;
     margin-right: 10px;
+}
+
+.product-search > input:focus {
+    background-color: white;
 }
 
 .product-search > a {
@@ -321,18 +349,10 @@ a:hover, a:active, a:focus {
     cursor: hand;
 }
 
+
 .product-category {
-    padding : 15px;
+    padding : 15px 0;
 }
-
-/* .product-category > .subtype > a {
-    width: 100%;
-    overflow: hidden;
-}
-
-.product-category > .subtype > a .rignt {
-    float: right;
-} */
 
 .product-category > span {
     display: block;
@@ -343,7 +363,6 @@ a:hover, a:active, a:focus {
     font-weight: 600;
 }
 
-
 .product-category .subtype {
     background-color: #5f1e09f1;
     overflow: hidden;
@@ -351,16 +370,22 @@ a:hover, a:active, a:focus {
     border-radius: 20px;
 }
 
-.product-category .subtype a {
-    color: #ffffff;
-    float: left;
-    padding-left: 10px;
+.product-category .subtype > a {
+    overflow: hidden;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 0 10px;
 }
 
-.product-category .subtype .arrow-down {
+.product-category .subtype a .left {
+    float: left;
+}
+
+.product-category .subtype a .right {
+    display: block;
+    padding-top: 2.5px;
     float: right;
-    padding-right: 10px;
-    padding-top: 2px;
 }
 
 .product-category .sub-content {
@@ -525,21 +550,9 @@ a:hover, a:active, a:focus {
 .productDetail-btn button {
     float: left;
     width: 50%;
-    border-radius: 0px;
     height: 70px;
     font-size: 20px;
     font-weight: 600;
-    background-image: none; /* 버튼 그라디언트 지우기 */
-}
-
-.productDetail-btn .right {
-    color: rgb(250,250,250);
-    background-color: #5f1e09f1;
-}
-
-.productDetail-btn .right:hover {
-    color: white;
-    background-color: rgb(90,34,18);
 }
 
 /* 버튼 영역 */
@@ -567,66 +580,79 @@ a:hover, a:active, a:focus {
 }
 
 /* 댓글영역 */
-.replyWrite-wrap {
+/* .replyWrite-wrap {
+    background-color: rgb(253,248,247);
+    border: 1px solid gainsboro;
+} */
+/* main의 베스트 리뷰 */
+.main-review {
+    padding: 15px;
+}
+
+/* product-detail 리뷰 */
+/* ?? */
+.reviewList-group {
+    display: inline-block;
+}
+
+/* review-inner */
+.review-wrap {
     background-color: rgb(253,248,247);
     border: 1px solid gainsboro;
 }
 
-.reply-wrap {
-    padding : 15px 0;
-    background-color: rgb(253,248,247);
-    border: 1px solid gainsboro;
+.productDetail-review {
+    padding: 15px 0;
 }
 
-.reply-inner {
+.review-inner {
     overflow: hidden;
     margin-bottom: 15px;
 }
 
-.replyInner-img {
+.reviewInner-img {
     float: left;
 }
 
-.replyInner-img img {
+.reviewInner-img img {
     width: 50px;
 }
 
-.replyInner-info {
+.reviewInner-info {
     margin-left : 15px;
+    margin-top: 2px;
     display: inline-block;
-    /* float: left; */
 }
 
-.replyInner-info > div {
+.reviewInner-info > div {
     margin-top: 3px;
     font-weight: 600;
 }
 
-.replyInfo-star > span {
-    font-size: 18px;
+.reviewInfo-star > span {
+    font-size: 15px;
     color: orange;
 }
 
-.replyInfo-star .star-empty {
+.reviewInfo-star .star-empty {
     color: gainsboro;
 }
 
-.reply-write {
-    overflow: hidden;
-}
-
-.reply-write > textarea {
-    margin-bottom: 15px;
-}
-
-.reply-write > button {
+/* review-content */
+.review-content > button {
     float: right;
     border-radius: 0px;
     background-image: none;
     font-weight: 600;
 }
 
-/* 댓글 */
-.replyList-group {
-    display: inline-block;
+/* reviewWrite-content */
+.review-write > textarea:focus {
+    background-color: white;
+}
+
+.review-write > button {
+    margin-top: 15px;
+    font-weight: 600;
+    float: right;
 }

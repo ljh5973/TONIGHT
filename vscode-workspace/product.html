@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product</title>
     
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,21 +15,20 @@
     <!-- 부트스트랩 css파일 참조 -->
     <link rel="stylesheet" href="css/bootstrap.css">
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/product.css">
-
     <!-- 부트스트랩 테마파일 참조 -->
     <link rel="stylesheet" href="css/bootstrap-theme.css">
-
+    
     <!-- 부트스트랩 js파일 참조 -->
     <script src="js/bootstrap.js"></script>
 
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="re.css">
 
+    <!-- custom js -->
+    <script src="js/main.js"></script>
 </head>
 <body>
-    <!-- 부트스트랩의 그리드 사용방법 : container 아래 row 클래스 안에 지정된 그리드 표기
-    * 참조 https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp -->
-
     <header>
 
         <div class="empty">
@@ -90,16 +89,16 @@
                 <!-- side bar -->
                 <div class="col-md-3 product-left">
                     <div class="product-search">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control common-text">
                         <a href="" class="glyphicon glyphicon-search"></a>
                     </div>
 
-                    <div class="product-category">
+                    <div class="product-category panel-group" id="accordion">
                         <span>카테고리</span>
-                        <!-- <ul>
+                        <ul class="panel">
                             <li class="subtype">
-                                <a href="#kinds" data-toggle="collapse">
-                                    <span>종류</span>
+                                <a href="#kinds" class="kinds" data-toggle="collapse" data-parent="#accordion">
+                                    <span class="left">종류</span>
                                     <span class="glyphicon glyphicon-chevron-down arrow-down right"></span>
                                 </a>
                             </li>
@@ -110,25 +109,13 @@
                                 <li><input type="checkbox" name="kinds"> 브랜디</li>
                                 <li><input type="checkbox" name="kinds"> 전통주</li>
                             </ul>
-                        </ul> -->
-                        <ul>
-                            <li class="subtype">
-                                <a href="#kinds" data-toggle="collapse">종류</a>
-                                <a href="#kinds" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
-                            </li>
-                            <ul id="kinds" class="collapse sub-content">
-                                <li><input type="checkbox" name="kinds"> 와인</li>
-                                <li><input type="checkbox" name="kinds"> 맥주</li>
-                                <li><input type="checkbox" name="kinds"> 위스키</li>
-                                <li><input type="checkbox" name="kinds"> 브랜디</li>
-                                <li><input type="checkbox" name="kinds"> 전통주</li>
-                            </ul>
                         </ul>
-
-                        <ul>
+                        <ul class="panel">
                             <li class="subtype">
-                                <a href="#alcont" data-toggle="collapse">도수</a>
-                                <a href="#alcont" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                                <a href="#alcont" name="alcont" data-toggle="collapse" data-parent="#accordion">
+                                    <span class="left">도수</span>
+                                    <span class="glyphicon glyphicon-chevron-down arrow-down right"></span>
+                                </a>
                             </li>
                             <ul id="alcont" class="collapse sub-content">
                                 <li><input type="checkbox" name="alcont"> ~ 20%</li>
@@ -139,10 +126,12 @@
                             </ul>
                         </ul>
 
-                        <ul>
+                        <ul class="panel">
                             <li class="subtype">
-                                <a href="#age" data-toggle="collapse">나이</a>
-                                <a href="#age" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                                <a href="#age" name="age" data-toggle="collapse" data-parent="#accordion">
+                                    <span class="left">나이</span>
+                                    <span class="glyphicon glyphicon-chevron-down arrow-down right"></span>
+                                </a>
                             </li>
                             <ul id="age" class="collapse sub-content">
                                 <li><input type="checkbox" name="age"> ~ 25</li>
@@ -153,10 +142,12 @@
                             </ul>
                         </ul>
 
-                        <ul>
+                        <ul class="panel">
                             <li class="subtype">
-                                <a href="#price" data-toggle="collapse">가격</a>
-                                <a href="#price" data-toggle="collapse" class="glyphicon glyphicon-chevron-down arrow-down"></a>
+                                <a href="#price" name="price" data-toggle="collapse" data-parent="#accordion">
+                                    <span class="left">가격</span>
+                                    <span class="glyphicon glyphicon-chevron-down arrow-down right"></span>
+                                </a>
                             </li>
                             <ul id="price" class="collapse sub-content">
                                 <li><input type="checkbox" name="age"> 50,000~</li>
@@ -341,12 +332,6 @@
             });
         });
 
-        // 다른 카테고리 안보이게 처리
-        $(function() {
-            $(".subtype > a").click(function(e) {
-                console.log(e.target);
-            })
-        })
     </script>
 
 </body>
