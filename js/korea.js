@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     drawMap('#korea');
-});
+
 //지도 그리기
 function drawMap(target) {
-    var width = 700; //지도의 넓이
+    var width = 550; //지도의 넓이
     var height = 700; //지도의 높이
-    var initialScale = 5500; //확대시킬 값
-    var initialX = -11900; //초기 위치값 X
+    var initialScale = 5535; //확대시킬 값
+    var initialX = -12000; //초기 위치값 X
     var initialY = 4050; //초기 위치값 Y
     var labels;
 
@@ -90,13 +90,20 @@ function drawMap(target) {
                 d3.event && d3.event.scale
                     ? d3.event.scale / height + 10
                     : initialScale / height + 10;
+        } else if (d.properties.code == 33) {
+            //충남은 조금 더 내리기
+            arr[1] +=
+                d3.event && d3.event.scale
+                    ? d3.event.scale / height - 20
+                    : initialScale / height - 20;
         }
         return 'translate(' + arr + ')';
     }
 
-    function zoom() {
-        projection.translate(d3.event.translate).scale(d3.event.scale);
-        states.selectAll('path').attr('d', path);
-        labels.attr('transform', translateTolabel);
-    }
+    // function zoom() {
+    //     projection.translate(d3.event.translate).scale(d3.event.scale);
+    //     states.selectAll('path').attr('d', path);
+    //     labels.attr('transform', translateTolabel);
+    // }
 }
+});

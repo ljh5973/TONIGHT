@@ -1,4 +1,14 @@
-{
-    "liveServer.settings.port": 5501
-    
+{"json.schemas": [
+    {
+      "fileMatch": [
+        "*.geojson"
+      ],
+      "url": "http://json.schemastore.org/geojson"
+    }
+  ],
+
+  "liveServer.settings.port": 5501
 }
+
+
+

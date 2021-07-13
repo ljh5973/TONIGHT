@@ -9,20 +9,6 @@ $(document).ready(function(){
         $('.header-user').toggleClass('active');
     });
 
-    $('.navbar-item-down').click(function(ev){
-        ev.preventDefault();
-        $('.header-button').toggleClass('active');
-    });
-
-    $(".search-cancel").click(function(ev){
-        ev.preventDefault();
-        $('.header-search').toggleClass('active');
-    })
-
-    $(".navbar-item-search").click(function(ev){
-        ev.preventDefault();
-        $('.header-search').toggleClass('active');
-    })
 
   
     $(".menuicon").on('click',function(){
@@ -46,5 +32,7 @@ $(document).ready(function(){
     
         }
     })
+
+    
 
 });

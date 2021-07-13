@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+            <!-- 부트스트랩 css파일참조 -->
+            <link rel="stylesheet" href="css/bootstrap.css">
+            <!-- 부트스트랩 js를 사용하기 위해서 jquery라이브러리 참조 -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <!-- 부트스트랩 js참조 -->
+            <script src="js/bootstrap.js"></script>
+            <!--마이페이지 디자인-->
+            <link rel="stylesheet" href="css/mypage.css">
+            <!--헤더디자인-->
+            <link rel="stylesheet" href="css/style.css">
+           
+
+</head>
+<body>
+
+    <header>
+
+        <div class="empty">
+    
+        </div>
+    
+        <div class="header-logo">
+            <a href="#">Tonight</a>
+        </div>
+    
+        <ul class="header-user">
+    
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+    
+    
+        
+        <div class="header-button">
+           
+            <div class="menu-button">
+                <a href="#"> <span>와인</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>맥주</span></a>
+            </div>
+            <div class="menu-button">
+                <a href="#"><span>위스키</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>브랜디</span></a>
+            </div>
+            
+            <div class="menu-button">
+                <a href="#"><span>전통주</span></a>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+        <div class="ham-container">
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="mypage-container">
+            <div class="mypage-row" >
+                <div class="col-md-3 col-sm-12 col-xs-12 mypage-left">
+                    
+                    <a href="mypage.html" class="mypage">
+                        <div>내정보 </div>
+                    </a>
+
+                    <a href="subscribe.html" class="mypage-hover">
+                        <div>구독정보 & 장바구니</div>
+                    </a>
+
+                    <a href="modify.html" class="mypage-hover">
+                        <div>회원정보수정</div>
+                    </a>
+
+                    <a href="withdraw.html" class="mypage-hover">
+                        <div>회원탈퇴</div>
+                    </a>
+
+                </div>
+                
+                
+                <div class="col-md-9 col-sm-12 col-xs-12 mypage-right">
+                    <div class="join">
+                        <div class="col-sm-12 col-xs-12 join-wrap">
+                            <div class="col-sm-12 col-xs-12 id-form">
+                                아이디<br/>
+                                <input readonly class="id">
+                             </div>
+                             <div class="col-sm-12 col-xs-12 name-form">
+                                 이름 <br/>
+                                 <input type="password" class="name">
+                             </div>
+                             <div class="col-sm-12 col-xs-12 email-form">
+                                 이메일<br/>
+                                 <input type="email" class="email">
+                             </div>
+                             <div class="col-sm-12 col-xs-12 birth-form">
+                                 생년월일<br/>
+                                 <input type="text" class="birth">
+                                 <button type="button" class="cal">달력</button>
+                             </div>
+                             <div class="col-sm-12 col-xs-12 add-form">
+                                 주소<br/>
+                                 <input type="text" class="add"><br/>
+                                 상세주소<br/>
+                                 <input type="text" class="add2">
+                                 <button type="button" onclick="location.href = 'modify.html'" class="joinbtn">수정하기</button>
+                             </div>
+                             
+                         </div>
+                     </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-menu">
+                    <ul class="footer-menu-inner">
+                        <li><a href="#">TONIGHT</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">상품문의</a></li>
+                        <li><a href="#">Q&A</a></li>
+
+                    </ul>
+
+                </div>
+                
+                
+                
+                
+                <div>
+
+                    <div class="copyright">
+                        
+                        
+                        <span>
+                        회사명 : TONIGHT   사업자등록번호 : 123-01-12345   대표자 : 유기농   전화번호 : 031-111-2222  <br/>  
+                        주소 : 경기도   사이트명 : TONIGHT    담당자명 : 유기농 <br/>
+                          담당자휴대폰 : 010-1111-2222   담당자이메일 : uginong@uginong.com<br/>
+                        Copyright ⓒ TONIGHT All Right Reserved.
+                        </span>
+                       
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+
+   * {
+    font-family: 'NanumBarunGothic';
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.withdraw-row > .withdraw-left > .withdraw-hover > div,
+.withdraw-row > .withdraw-left > .withdraw > div {
+    display: block;
+    text-align: left;
+    font-size: larger;
+    overflow: hidden;
+    color: #777;
+}
+
+.withdraw-row > .withdraw-left > .withdraw-hover,
+.withdraw-row > .withdraw-left > .withdraw {
+
+    align-items: center;
+        display: flex;
+        border-radius: 0 50px 50px 0;
+        padding: 10px 16px 10px 24px;
+        position: relative;
+
+}
+
+.withdraw-row > .withdraw-left > .withdraw-hover:hover,
+.withdraw-row > .withdraw-left > .withdraw {
+    background-color: bisque;
+}
+
+.withdraw-left {
+    box-sizing: border-box;;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.withdraw-row {
+    padding-bottom: 150px;
+}
+
+.withdraw-right {
+    padding-top: 30px;
+    padding-bottom: 400px;
+}
+
+.withdraw-right > p {
+    font-size: revert;
+    font-weight: bold;
+}
+
