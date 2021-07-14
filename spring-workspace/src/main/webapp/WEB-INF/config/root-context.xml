@@ -25,7 +25,7 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<!-- <property name="mapperLocations" value="classpath:/sqlmap/*.xml" /> -->
+		<property name="mapperLocations" value="classpath:/sqlmap/*.xml" />
 		<property name="configLocation" value="classpath:/mybatis-config/mybatis-config.xml" />
 	</bean>
 	

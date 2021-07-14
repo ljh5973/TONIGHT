@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
     <section>
         <div class="container">
             <div class="row product-row">
@@ -79,7 +81,7 @@
 
                 <!-- product list -->
                 <ul class="col-md-9 product-right">
-                    <li class="col-xs-12 col-sm-6 col-md-4 product-li">
+                	<%-- <li class="col-xs-12 col-sm-6 col-md-4 product-li">
                         <div class="product-img">
                             <img src="${pageContext.request.contextPath}/resources/img/dalmore-age12-giftset.jpg" alt="사진입니다">
                         </div>
@@ -91,98 +93,22 @@
                         <div class="product-detail-hover">
                             <a href="productDetail"></a>
                         </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/majesty-xo.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">마제스티X.O</div>
-                            <div class="product-content">명절추천상품</div>
-                            <div class="product-price">120,000 원</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href="productDetail"></a>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/cat.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">CHE고영희EZE</div>
-                            <div class="product-content">CUTE</div>
-                            <div class="product-price">추정불가</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href=" "></a>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/dalmore-age12-giftset.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">달모어12년선물세트</div>
-                            <div class="product-content">고급달모어잔</div>
-                            <div class="product-price">148,000원</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href=" "></a>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/dalmore-age12-giftset.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">달모어12년선물세트</div>
-                            <div class="product-content">고급달모어잔</div>
-                            <div class="product-price">148,000원</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href=" "></a>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/majesty-xo.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">마제스티X.O</div>
-                            <div class="product-content">명절추천상품</div>
-                            <div class="product-price">120,000 원</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href=" "></a>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/cat.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">CHE고영희EZE</div>
-                            <div class="product-content">CUTE</div>
-                            <div class="product-price">추정불가</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href=" "></a>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="product-img">
-                            <img src="${pageContext.request.contextPath}/resources/img/dalmore-age12-giftset.jpg" alt="사진입니다">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">달모어12년선물세트</div>
-                            <div class="product-content">고급달모어잔</div>
-                            <div class="product-price">148,000원</div>
-                        </div>
-                        <div class="product-detail-hover">
-                            <a href=" "></a>
-                        </div>
-                    </li>
+                   	</li> --%>
+                	<c:forEach var="vo" items="${list }">
+                		<li class="col-xs-12 col-sm-6 col-md-4 product-li">
+	                        <div class="product-img">
+	                            <img src="${pageContext.request.contextPath}/resources/img/${vo.p_imgAddr}" alt="사진입니다">
+	                        </div>
+	                        <div class="product-info">
+	                            <div class="product-name">${vo.p_name }</div>
+	                            <div class="product-content">${vo.p_category }</div>
+	                            <div class="product-price">${vo.p_price }원</div>
+	                        </div>
+	                        <div class="product-detail-hover">
+	                            <a href="productDetail"></a>
+	                        </div>
+                    	</li>
+                	</c:forEach>
                 </ul>
             </div>
         </div>
