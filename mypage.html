@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-            <!-- 부트스트랩 css파일참조 -->
-            <link rel="stylesheet" href="css/bootstrap.css">
-            <!-- 부트스트랩 js를 사용하기 위해서 jquery라이브러리 참조 -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <!-- 부트스트랩 js참조 -->
-            <script src="js/bootstrap.js"></script>
-            <!--마이페이지 디자인-->
-            <link rel="stylesheet" href="css/mypage.css">
-            <!--헤더디자인-->
-            <link rel="stylesheet" href="css/style.css">
+   
+
+    <!-- 부트스트랩 css파일참조 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 부트스트랩 js를 사용하기 위해서 jquery라이브러리 참조 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 부트스트랩 js참조 -->
+    <script src="js/bootstrap.js"></script>
+    <!--마이페이지 디자인-->
+    <link rel="stylesheet" href="css/mypage_test.css">
+    <!--헤더디자인-->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/mypage.js"></script>
            
 
 </head>
@@ -75,65 +79,177 @@
     </header>
 
     <section>
-        <div class="mypage-container">
-            <div class="mypage-row" >
-                <div class="col-md-3 col-sm-12 col-xs-12 mypage-left">
-                    
-                    <a href="mypage.html" class="mypage">
-                        <div>내정보 </div>
-                    </a>
+        <div class="col-md-12 container">
+            <div class="col-md-12 row">
 
-                    <a href="subscribe.html" class="mypage-hover">
-                        <div>구독정보 & 장바구니</div>
-                    </a>
-
-                    <a href="modify.html" class="mypage-hover">
-                        <div>회원정보수정</div>
-                    </a>
-
-                    <a href="withdraw.html" class="mypage-hover">
-                        <div>회원탈퇴</div>
-                    </a>
-
-                </div>
-                
-                
-                <div class="col-md-9 col-sm-12 col-xs-12 mypage-right">
-                    <div class="join">
-                        <div class="col-sm-12 col-xs-12 join-wrap">
-                            <div class="col-sm-12 col-xs-12 id-form">
-                                아이디<br/>
-                                <input readonly class="id">
-                             </div>
-                             <div class="col-sm-12 col-xs-12 name-form">
-                                 이름 <br/>
-                                 <input type="password" class="name">
-                             </div>
-                             <div class="col-sm-12 col-xs-12 email-form">
-                                 이메일<br/>
-                                 <input type="email" class="email">
-                             </div>
-                             <div class="col-sm-12 col-xs-12 birth-form">
-                                 생년월일<br/>
-                                 <input type="text" class="birth">
-                                 <button type="button" class="cal">달력</button>
-                             </div>
-                             <div class="col-sm-12 col-xs-12 add-form">
-                                 주소<br/>
-                                 <input type="text" class="add"><br/>
-                                 상세주소<br/>
-                                 <input type="text" class="add2">
-                                 <button type="button" onclick="location.href = 'modify.html'" class="joinbtn">수정하기</button>
-                             </div>
-                             
+                <ul class="col-md-3 nav">
+                  <li class="active" data-toggle="pill" href="#mypage" ><a href="#mypage"> 내정보</a></li>
+                  <li data-toggle="pill" href="#subscribe"><a href="#subscribe">구독정보</a></li>
+                  <li data-toggle="pill" href="#basket"><a href="#basket">장바구니</a></li>
+                  <li data-toggle="pill" href="#withdraw"><a href="#withdraw">회원탈퇴</a></li>
+                </ul>
+    
+                <div class="col-md-9 tab-content">
+                  <div id="mypage" class="tab-pane fade in active">
+                    <!-- <div class="col-md-9 col-sm-12 col-xs-12 mypage-right"> -->
+                        <div class="join">
+                            <div class="col-sm-12 col-xs-12 join-wrap">
+                                <div class="col-sm-12 col-xs-12 id-form">
+                                    아이디<br/>
+                                    <input readonly class="id">
+                                 </div>
+                                 <div class="col-sm-12 col-xs-12 id-form">
+                                    비밀번호<br/>
+                                    <input type="password" class="id">
+                                 </div>
+                                 <div class="col-sm-12 col-xs-12 id-form">
+                                    비밀번호 확인<br/>
+                                    <input type="password" class="id">
+                                 </div>
+                                 <div class="col-sm-12 col-xs-12 name-form">
+                                     이름 <br/>
+                                     <input readonly class="name">
+                                 </div>
+                                 <div class="col-sm-12 col-xs-12 email-form">
+                                     이메일<br/>
+                                     <input type="email" class="email">
+                                 </div>
+                                 <div class="col-sm-12 col-xs-12 birth-form">
+                                     생년월일<br/>
+                                     <input type="text" class="birth">
+                                     <button type="button" class="cal">달력</button>
+                                 </div>
+                                 <div class="col-sm-12 col-xs-12 add-form">
+                                     주소<br/>
+                                     <input type="text" class="add"><br/>
+                                     상세주소<br/>
+                                     <input type="text" class="add2">
+                                     <button type="button">수정하기</button>
+                                 </div>
+                                 
+                             <!-- </div> -->
                          </div>
-                     </div>
+    
+                        
+                    </div>
+                  </div>
 
-                    
+                  <div id="subscribe" class="tab-pane fade">
+                    <div class="col-md-11 col-sm-12 col-xs-12 mypage-right">
+                        <h2>구독정보</h2>
+                        <div class="col-md-12 subscribe-sub">
+                            
+                            <div class="col-md-3 col-sm-12 col-xs-12 subscribe-im">
+                                <img src="img/1.jpg">
+                            </div>
+                            
+                            <div class="col-md-6 col-sm-12 col-xs-12 subscribe-info">
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                            </div>
+    
+                            <div class="col-md-3 col-sm-12 col-xs-12 subscribe-btn">
+                                <div class="subscribe-extention">
+                                    <button>수   정</button>
+                                </div>
+                                <div class="subscribe-cancle">
+                                    <button>취   소</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-12 subscribe-sub">
+                            
+                            <div class="col-md-3 col-sm-12 col-xs-12 subscribe-im">
+                                <img src="img/1.jpg">
+                            </div>
+                            
+                            <div class="col-md-6 col-sm-12 col-xs-12 subscribe-info">
+                                정보
+                            </div>
+    
+                            <div class="col-md-3 col-sm-12 col-xs-12 subscribe-btn">
+                                <div class="subscribe-extention">
+                                    <button>수   정</button>
+                                </div>
+                                <div class="subscribe-cancle">
+                                    <button>취   소</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-12 subscribe-sub">
+                            
+                            <div class="col-md-3 col-sm-12 col-xs-12 subscribe-im">
+                                <img src="img/1.jpg">
+                            </div>
+                            
+                            <div class="col-md-6 col-sm-12 col-xs-12 subscribe-info">
+                                정보
+                            </div>
+    
+                            <div class="col-md-3 col-sm-12 col-xs-12 subscribe-btn">
+                                <div class="subscribe-extention">
+                                    <button>수   정</button>
+                                </div>
+                                <div class="subscribe-cancle">
+                                    <button>취   소</button>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        
+                    </div>
+    
+                  </div>
+                  
+                  <div id="basket" class="tab-pane fade">
+                    <div class="col-md-11 col-sm-12 col-xs-12 mypage-right">
+                        <h2 class="subscribe-h2">장바구니</h2>
+                        <div class="col-md-12 subscribe-sub">
+                            
+                            <div class="col-md-3 subscribe-im">
+                                <img src="img/3.jpg">
+                            </div>
+                            
+                            <div class="col-md-6  subscribe-info">
+                                정보가 들어갈 칸이에여
+                            </div>
+    
+                            <div class="col-md-3 subscribe-btn">
+                                <div class="subscribe-extention">
+                                    <button>구   독</button>
+                                </div>
+                                <div class="subscribe-cancle">
+                                    <button>삭   제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                  </div>
+
+                  <div id="withdraw" class="tab-pane fade">
+                    <h2>※삭제시 복구가 불가능합니다※</h2>
+                    <div class="col-md-8 col-sm-12 col-xs-12 mypage-right">
+                        <p>비밀번호를 입력하세요<p>
+                        <input type="password" class="pw">
+                        <button type="submit" class="withdraw_ok">확인</button>
+                    </div>
+                  </div>
                 </div>
+                <span id="top-link-block" class="hidden">
+                <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+                    <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+                </a>
+            </span>
             </div>
-        </div>
-
+          </div>
     </section>
 
     <footer>

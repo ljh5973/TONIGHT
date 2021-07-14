@@ -20,8 +20,7 @@
 
 
 
-.mypage-row > .mypage-left > .mypage-hover > div,
-.mypage-row > .mypage-left > .mypage > div {
+.nav > li > a {
     display: block;
     text-align: left;
     font-size: larger;
@@ -29,22 +28,41 @@
     color: #777;
 }
 
-.mypage-row > .mypage-left > .mypage-hover,
-.mypage-row > .mypage-left > .mypage {
+.nav > li {
 
     align-items: center;
         display: flex;
         border-radius: 0 50px 50px 0;
-        padding: 10px 16px 10px 24px;
+        padding: 10px 16px 10px 0px;
         position: relative;
-
 }
 
-.mypage-row > .mypage-left > .mypage-hover:hover {
+.nav > a {
+    align-items: center;
+    display: flex;
+    border-radius: 0 50px 50px 0;
+    padding: 10px 16px 10px 0px;
+    position: relative;
+}
+
+
+.nav > a:hover {
     background-color: bisque;
 }
 
-.mypage-row > .mypage-left > .mypage {
+li.active {
+    background-color: bisque;
+}
+
+.nav {
+    margin-bottom: 100px;
+}
+
+.nav > li:hover {
+    background-color: bisque;
+}
+
+.nav > li > a:hover {
     background-color: bisque;
 }
 
@@ -58,11 +76,9 @@
     margin-top: 20px;
 }
 
-.mypage-right {
-    /* border: #777 solid 1px; */
+.tab-pane {
     box-sizing: border-box;
-    float: right;
-    padding-top: 20px;
+    padding-bottom: 100px;
 }
 
 .mypage-right > h2 {
@@ -84,17 +100,17 @@
     padding : 5px;
 }
 
-/* .mypage-im , .mypage-info {
+.mypage-im , .mypage-info {
     float: left;
 
-} */
+}
 
 .mypage-sub > .mypage-info {
     border: #777 solid 1px;
 }
  
 
-.mypage-sub > .mypage-im > img {
+.subscribe-im {
     background-size: contain;
     width: 170px;
     border-radius: 5px;
@@ -102,10 +118,10 @@
 
 .mypage-btn {
 
-    /* float: right; */
+    float: right;
     overflow: hidden;
     
-}
+} 
 
 .mypage-btn > .mypage-extention >button
 {
@@ -124,7 +140,8 @@
 
 }
 
-.mypage-btn > .mypage-cancle >button {
+.subscribe-extention > button,
+.subscribe-cancle > button {
     background:rgb(250, 250, 250);
     border: 3px solid #777;
     border-radius: 5px;
@@ -137,15 +154,32 @@
     text-transform: uppercase;
     width: 150px;
     float: right;
+    margin-right: 30px;
 }
 
-.mypage-btn > .mypage-extention >button:hover {
+.subscribe-extention > button:hover,
+.subscribe-cancle > button:hover {
     background-color: rgb(90, 34, 18);
 }
 
-.mypage-row {
+.row {
+    padding-top: 30px;
     padding-bottom: 400px;
 }
+
+.subscribe-sub {
+         /* border: #777 solid 1px; */
+        background-color: rgb(240, 220, 220);
+        margin-bottom: 30px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        padding : 5px;
+}
+
+
+
 
 .join-wrap{
     margin: 0 auto;
@@ -155,6 +189,7 @@
     margin-left: 20%;
     height: 100%;
     padding-top: 2%;
+    padding-bottom: 100px;
 }
 
 .id,.name,.email,.birth,.add,.add2 {
@@ -208,4 +243,20 @@
 
 .img-form {
     text-align: center;
+}
+
+.add-form > button {
+    float: right;
+    height: 50%;
+    width: 100%;
+    margin-top: 20px;
+    color: #5f1e09f1;
+    background-color: rgb(240,220,220);
+    box-shadow: none;
+    border-color: rgb(240,220,220);
+}
+
+.subscribe-btn {
+    float: right;
+    margin-left: 140px;
 }
