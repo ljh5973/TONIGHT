@@ -4,9 +4,9 @@ $(document).ready(function(){
 });
 //지도 그리기
 function drawMap(target) {
-    var width = 550; //지도의 넓이
+    var width = 450; //지도의 넓이
     var height = 700; //지도의 높이
-    var initialScale = 5535; //확대시킬 값
+    var initialScale = 5495; //확대시킬 값
     var initialX = -12000; //초기 위치값 X
     var initialY = 4050; //초기 위치값 Y
     var labels;
