@@ -299,26 +299,32 @@ textarea, button, select{
         font-weight: bolder;
     }
     .junidpw > .junid {
-        margin-bottom: 15px;
         height: 45px;
         width: 100%;
         padding: 0;
         border: 3px solid rgb(240, 220, 220);
     }
     .junidpw > .junpw {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         height: 45px;
         width: 100%;
         padding: 0;
         border: 3px solid rgb(240, 220, 220);
     }
+    .junkakao-btn > img {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
     .junlogin{
         height: 50px;
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         background-color: rgb(240, 220, 220);
         border-color: rgb(240,220,220);
         color: #5f1e09f1;
+        font-size: 30px;
+
     }
     
     .junlogin-form {
@@ -393,6 +399,7 @@ textarea, button, select{
         background-color: rgb(240, 220, 220);
         border-color: rgb(240,220,220);
         color: #5f1e09f1;
+        font-size: 30px;
     }
     
     .junlogin-form {
