@@ -1,0 +1,1061 @@
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@font-face {
+    font-family: 'KoreanFrenchTypewriter';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 나눔바른고딕 */
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+/* 사이드바 서비스 */
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 1. 디자인 시작시 기본 선언 */
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nanum Gothic Coding', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    width: 100%;
+    min-width: 320px;
+}
+
+textarea, button, select{
+    -webkit-appearance: none;   /* 브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 */
+    -moz-appearance: none;
+    -o-appearance: none;
+
+}
+
+ul, li, dl, ol{
+    list-style: none; /* 순서 요소들의 리스트 스타일 제거 */
+}
+
+.page-section img{
+    width: 100%;
+}
+
+.my-3{
+    margin-top: 35px;
+}
+.portfolio-item img{
+    width: 100%;
+}
+
+
+
+  #portfolio .portfolio-item {
+    max-width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #portfolio .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+  #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 200, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+  }
+  #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    font-size: 1.25rem;
+    color: white;
+  }
+  #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+    opacity: 1;
+  }
+  #portfolio .portfolio-item .portfolio-caption {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+    font-size: 1.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  .portfolio-modal .modal-dialog {
+    margin: 1rem;
+    max-width: 100vw;
+  }
+  .portfolio-modal .modal-content {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    text-align: center;
+  }
+  .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .portfolio-modal .modal-content p.item-intro {
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  .portfolio-modal .modal-content p {
+    margin-bottom: 2rem;
+  }
+  .portfolio-modal .modal-content ul.list-inline {
+    margin-bottom: 2rem;
+  }
+  .portfolio-modal .modal-content img {
+    margin-bottom: 2rem;
+  }
+  .portfolio-modal .close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .portfolio-modal .close-modal:hover {
+    opacity: 0.3;
+  }
+
+  .marketing h2 {
+    font-weight: 400;
+}
+@media (min-width: 62em){
+.featurette-heading {
+    margin-top: 10rem;
+}
+}
+@media (min-width: 40em){
+.featurette-heading {
+    font-size: 50px;
+}
+}
+.featurette-heading {
+    /* font-weight: 300; */
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+/* 진호) 문제가 될 수 있을 거 같아서 주석했어~*/
+/* .col-xs-12{
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+img{
+    max-width: 100%; /* 사이즈가 변했을 때 넓이를 유지 */
+    /* height: auto;   /* 넓이에 따라 높이가 변함 */
+    /* margin: 0 auto;
+
+} */
+
+/* 백그라운드 */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+    margin-top:-170px;
+}
+
+/* 헤더영역 */
+header{
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: black;
+     flex-direction: row;
+     flex-wrap: wrap;
+
+}
+
+header .header-logo {
+    font-size: 30px;
+    color: white;
+    padding-left: 90px;
+}
+
+.header-logo a {
+    color: rgb(238,224,219);
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+}
+
+.header-logo a:hover {
+    color: rgb(238,224,219);
+}
+
+header .header-user {
+    display: flex; 
+}
+
+header .header-user li {
+    padding: 8px 12px;
+}
+
+header .header-user li a{
+    color: white;
+}
+
+.main-wide img{
+    width: 100%;
+    height: 400px;
+}
+
+.header-button{
+    display: flex;
+    width: 100%;
+    background-color:#5f1e09f1 ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 200px;
+    height: 70px;
+}
+
+.header-button > .menu-button{
+    height: 100%;
+}
+
+.header-button a {
+    color:white;
+    display: block;
+    height: 100%;
+}
+
+.header-button a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.header-button a span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 100%;
+}
+
+.wide-search button{
+    background-color:#5f1e09f1;
+    width: 30px;
+}
+.wide-search button i {
+    color: white;
+}
+
+
+/* side bar */ 
+
+input[id="menuicon"]{
+    display:none;
+}
+
+input[id="menuicon"] +label{
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[id="menuicon"]+label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #000;
+    transition: all .35s;
+}
+
+input[id="menuicon"]+label span:nth-child(1){
+    top: 0;
+}
+
+input[id="menuicon"]+label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"]+label span:nth-child(3){
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked +label span:nth-child(1){
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked +label span:nth-child(2){
+    opacity: 0;  
+}
+
+input[id="menuicon"]:checked +label span:nth-child(3){
+    bottom: 50%;
+    transform:translateY(50%) rotate(-45deg);  
+}
+
+.sidebar{
+    width: 250px;
+    height: 100%;
+    background-color:white ;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 999;
+    transition: all .35s;
+    font-size: 10px;
+}
+
+input[id="menuicon"]:checked+label+div{
+    right: 0;
+}
+
+input[id="menuicon"]+label{
+    display: block;
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    right: 0;
+    top:calc(50% - 25px);
+    transition:all .35s;
+    cursor:pointer;
+}
+
+input[id="menuicon"]:checked+label{
+    z-index: 2;
+    right: 250px;
+}
+
+.sidebar{
+    padding-left:15px ;
+}
+
+.sidebar-product{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar-img{
+    border: 1px solid #777;
+    height: 100px;
+    width: 45%;
+    margin: 2px 2px;
+}
+
+.sidebar-img a img{
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-service{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.sidebar-service span{
+    display: block;
+    font-size: 35px;
+    font-family: 'BMJUA';
+}
+
+.sidebar-bottom{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.sidebar-bottom a i{
+    width: 30px;
+    padding-top: 5px;
+    font-size: 30px;
+}
+
+.sidebar .idpwfind{
+    margin-top: 10px;
+
+}
+
+.sidebar .login-form{
+    margin-top: 10px;
+    width:220px;
+    
+}
+
+
+.sidebar .idpw .id,
+.sidebar .idpw .pw{
+    width:20%
+}
+
+
+@media(max-width:768px){
+
+ input[id="menuicon"]+label{
+     display: none;
+ }
+    .sidebar{
+        display: none;
+    }
+}
+
+
+/* 햄버거버튼 */
+.ham-container{
+    position: absolute;
+    top: 15px;
+    right: 9px;
+}
+.hamBtn{
+    position: relative;
+    transition: .35 ease-in-out;
+    width: 25px;
+    height: 19px;
+    display: none;
+    right: 9px;
+}
+.hamBtn span{
+    position: absolute;
+    height: 6px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #3d4146;
+    top: 0;
+    transition: 0.2s;
+    
+
+}
+
+.hamBtn span:nth-child(1){
+    top: 0;
+}
+.hamBtn span:nth-child(2),
+.hamBtn span:nth-child(3){
+    top: 10px;
+}
+.hamBtn span:nth-child(4){
+    top: 20px;
+}
+
+.hamBtn.active span:nth-child(1),
+.hamBtn.active span:nth-child(4){
+    opacity: 0;
+}
+.hamBtn.active span:nth-child(2){
+    transform:rotate(45deg);
+}
+.hamBtn.active span:nth-child(3){
+    transform:rotate(-45deg);
+}
+@media(max-width:768px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding:8px 15px;
+    }
+    header .header-logo{
+        padding-left: 20px;
+    }
+
+    header .header-user{
+ 
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 5px;
+        transition: .35 ease-in-out;
+
+    }
+    header .header-user li{
+        width: 15%;
+        
+        align-self: flex-end;
+       
+    }
+    header .header-user li a{
+        justify-content: flex-end;
+        display: flex;
+        
+    }
+    .hamBtn{
+        display: block;
+    }
+    header .header-user.active{
+        display:flex;
+        
+    }
+  
+    
+}
+
+/*조인  */
+@media screen and (min-width: 769px) {
+    
+    .junsec {
+        background-color: rgb(250,250,250);
+    }
+    
+    .junjoin {
+        margin: 0 auto;
+        height: 700px;
+    }
+    .junjoin-wrap{
+        margin: 0 auto;
+        display: inline-block;
+        overflow: hidden;
+        width: 30%;
+        margin-left: 35%;
+        height: 100%;
+        padding-top: 2%;
+    }
+    
+    .junid,.junpw,.junpwCheck,.junbirth,.junadd,.junadd2 {
+        width: 100%;
+        height: 50%;
+        border: 3px solid rgb(240,220,220);
+    }
+    .junid-form,.junpw-form,.junpwCheck-form,.junbirth-form,.junadd-form{
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        height: 15%;
+        margin-bottom: 5px;
+        font-weight: bolder;
+    }
+    
+    .junadd {
+        margin-bottom: 5px;
+    }
+    
+    
+    .junlogin {
+        font-weight: bolder;
+        font-size: 60px;
+    }
+    
+    #junidCheck, .juncal {
+        margin-top: 2px;
+        height: 45%;
+        width: 48px;
+        color: #5f1e09f1;
+        background-color: rgb(240,220,220);
+        position: absolute;
+        border-color: rgb(240,220,220);
+        margin-left: -50px;
+    }
+    .junjoinbtn {
+        float: left;
+        height: 50%;
+        width: 100%;
+        margin-top: 30px;
+        color: #5f1e09f1;
+        background-color: rgb(240,220,220);
+        border-color: rgb(240,220,220);
+    }
+}
+@media screen and (max-width: 768px) {
+    .junsec {
+        background-color: rgb(250,250,250);
+    }
+    
+    .junjoin {
+        margin: 0 auto;
+        height: 700px;
+    }
+    .junjoin-wrap{
+        margin: 0 auto;
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding-top: 2%;
+    }
+    
+    .junid,.junpw,.junpwCheck,.junbirth,.junadd,.junadd2 {
+        width: 100%;
+        height: 50%;
+        border: 3px solid rgb(240,220,220);
+    }
+    .junid-form,.junpw-form,.junpwCheck-form,.junbirth-form,.junadd-form{
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        height: 15%;
+        margin-bottom: 5px;
+        font-weight: bolder;
+    }
+    
+    .junadd {
+        margin-bottom: 5px;
+    }
+    
+    
+    .junlogin {
+        font-weight: bolder;
+        font-size: 60px;
+    }
+    
+    #junidCheck, .juncal {
+        margin-top: 2px;
+        height: 45%;
+        width: 48px;
+        color: #5f1e09f1;
+        background-color: rgb(240,220,220);
+        position: absolute;
+        border-color: rgb(240,220,220);
+        margin-left: -50px;
+    }
+    .junjoinbtn {
+        float: left;
+        height: 50%;
+        width: 100%;
+        margin-top: 30px;
+        color: #5f1e09f1;
+        background-color: rgb(240,220,220);
+        border-color: rgb(240,220,220);
+    }
+}
+
+/*로그인  */
+.junwide img{
+    
+    width: 100%;
+    height: 400px;
+
+}
+
+@media screen and (min-width: 769px) {
+
+
+    .junsec{
+        background-color: rgb(250, 250, 250);
+    }
+    .junlogin-wrap{
+        margin: auto;
+        overflow: hidden;
+        
+        width: 100%;
+        height: 500px;
+    }
+    .junlogin-wrap2{
+        margin-left: 30%;
+        display: inline-block;
+        padding: 10px;
+        width: 40%;
+        height: 100%;
+    }
+    
+    .junidpw {
+        padding-top: 10%;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: bolder;
+    }
+    .junidpw > .junid {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 3px solid rgb(240, 220, 220);
+    }
+    .junidpw > .junpw {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 3px solid rgb(240, 220, 220);
+    }
+    .junlogin{
+        height: 50px;
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: rgb(240, 220, 220);
+        border-color: rgb(240,220,220);
+        color: #5f1e09f1;
+        font-size:30px;
+    }
+    
+    .junlogin-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .junlogin-form > input {
+        font-weight: bolder;
+    }
+    .junidpwfind {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 15px;
+    }
+    .junidpwfind > .junjoin {
+        float: right;
+    }
+    
+
+    .junid:focus, .junpw:focus {
+        box-shadow: none;
+        border: 3px solid #5f1e09f1;
+        background-color: rgb(253,248,247);
+    }
+}
+@media screen and (max-width: 768px){
+    .junsec{
+        background-color: rgb(250, 250, 250);
+    }
+    .junlogin-wrap{
+        margin: auto;
+        overflow: hidden;
+        
+        width: 100%;
+        height: 500px;
+    }
+    .junlogin-wrap2{
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .junidpw {
+        padding-top: 10%;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: bolder;
+    }
+    .junidpw > .junid {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 2px solid rgb(240, 220, 220);
+    }
+    .junidpw > .junpw {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 2px solid rgb(240, 220, 220);
+    }
+    .junlogin{
+        height: 50px;
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: rgb(240, 220, 220);
+        border-color: rgb(240,220,220);
+        color: #5f1e09f1;
+        font-size:30px;
+    }
+    
+    .junlogin-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .junlogin-form > input {
+        font-weight: bolder;
+    }
+    .junidpwfind {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 15px;
+    }
+    .junidpwfind > .junjoin {
+        float: right;
+    }
+    
+
+    .junid:focus, .junpw:focus {
+        box-shadow: none;
+        border: 3px solid #5f1e09f1;
+        background-color: rgb(253,248,247);
+    }
+}
+
+/*메인로그인  */
+
+ /* input type=text */
+   .common-text:focus {
+       border: 2px solid #5f1e09f1;
+       box-shadow: none;
+       background-color: rgb(253,248,247);
+   }
+   
+   .junsec{
+    background-color: rgb(250,250,250);
+}
+@media screen and (min-width : 769px) {
+
+    
+    .junlogin-form{
+        text-align: center;
+        height: 500px;
+        padding: 0;
+        width: 100%;
+    }
+    .junlogin-btn {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        height: 80%;
+        padding-top: 140px;
+    }
+    
+    a:hover{
+        color: #5f1e09f1;
+    }
+    .junloginbtnclick, #custom-login-btn > img {
+        display: block;
+        margin: auto;
+        width: 90%;
+        height: 30%;
+    }
+    .junloginbtnclick {
+        font-size: 45px;
+        background-color: #5f1e09f1;
+        margin-bottom: 30px;
+        color: rgb(250,250,250);
+        text-decoration: none;
+    }
+    #juntonight-loginbtn {
+        font-family: 'Lobster', cursive;
+    font-size: 70px;
+    font-size: 50px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    
+
+    
+    .junlogin-form{
+        text-align: center;
+        height: 500px;
+        padding: 0;
+        width: 100%;
+    }
+    .junlogin-btn {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        height: 80%;
+        padding-top: 140px;
+    }
+    
+    a:hover{
+        color: #5f1e09f1;
+    }
+    .junloginbtnclick, #custom-login-btn > img {
+        display: block;
+        margin: auto;
+        width: 90%;
+        height: 30%;
+    }
+    .junloginbtnclick {
+        font-size: 45px;
+        background-color: #5f1e09f1;
+        margin-bottom: 30px;
+        color: rgb(250,250,250);
+        text-decoration: none;
+    }
+    #juntonight-loginbtn {
+        font-family: 'Lobster', cursive;
+    font-size: 70px;
+        height: 100%;
+        font-size: 43px;
+    }
+}
+   
+   /* button */
+   .common-btn button {
+       border-radius: 0px;
+       background-image: none; /* 버튼 그라디언트 지우기 */
+   }
+   
+   .common-btn .right {
+       color: rgb(250,250,250);
+       background-color: #5f1e09f1;
+   }
+   
+   .common-btn .right:hover {
+       color: white;
+       background-color: rgb(90,34,18);
+   }
+
+/* Main */
+
+
+
+/* 메인 탑 */
+.topImg img{
+ height: 35em;
+ margin-bottom: 8em;
+}
+.topImg{
+    display: flex;
+    justify-content: center;
+}
+
+/* 메인 search */
+
+.wide-search{
+    display: flex;
+    margin-top: -7em;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.wide-search p{
+ text-align: center;
+}
+
+.wide-input{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/* 메인 info */
+.body-info{
+    padding: 3rem  4.5rem;
+}
+
+.body-info-inner{
+    display: flex;
+    justify-content: center;
+    
+}
+.info-img{
+    display: flex;
+    justify-content: center;
+}
+.info-img img{
+    height: 15em;
+}
+
+.main-info2{
+    margin-top: -5em;
+    display: flex;
+    flex-direction: column;
+}
+.startBtn{
+    align-self: center;
+    margin-top: 15px;
+    
+}
+
+.brownline{
+
+    width: 40px;
+    height: 5px;
+    background-color: brown;
+}
+
+/* 인포 라인 */
+.info-line1{
+    height: 100px;
+}
+.info-line2{
+    height: 100px;
+}
+
+
+/* 메인 slider */
+.carousel-inner .item a img{
+    height: 20em;
+    width: 15em;
+}
+.main-slider{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+/* 메인 review */
+.body-review-inner{
+    background-color: rgb(240,220,220);
+}
+.review{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+
+/* 메인 맵 */
+
+.k-border{
+    border: 1px solid #888;
+    padding: 0;
+    margin: 5px 5px;
+}
+
+/* footer */
+footer{
+    padding: 0;
+    margin-top: 50px;
+    background-color: #5f1e09f1;
+    width: 100%;
+    color: wheat;
+    display: flex;
+    height: 150px;
+}
+.footer-container{
+    width: 100%;
+}
+
+footer .footer-menu > .footer-menu-inner li{
+    display: inline-block;
+    border-left: solid 1px #777;
+}
+
+footer .footer-menu{
+    background-color:#3f1709f1 ;
+}
+
+footer .footer-menu > li > a{
+    display: block;
+    padding: 0px 15px;
+    
+}
+.copyright{
+  text-align: center;
+    
+}

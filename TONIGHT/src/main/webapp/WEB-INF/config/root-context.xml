@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<!-- driver명은 다시 찾아보기  -->
+		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+			<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/tonight?serverTimezone=Asia/Seoul"/>
+			<property name="username" value="root"/>
+			<property name="password" value="1234"/>  
+		
+		</bean>
+		
+		<!--HikariCP configuration  -->
+		<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+	  	  <constructor-arg ref="hikariConfig" />
+		</bean>
+		
+			<!-- namespace체크, sqlSessionFactoryBean객체를 사용, scan명령 -->
+		
+		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<property name="dataSource" ref="dataSource"/>
+			
+			
+			<!-- xml매퍼의 위치 지정 -->
+	<!-- 	<property name="mapperLocations" value="classpath:/mapper/*.xml"></property>
+			마이바티스 xml설정의 위치 지정
+			<property name="configLocation" value="classpath:/mybatis-config/mybatis-config.xml"></property> -->
+		
+		</bean>
+		
+		<mybatis-spring:scan base-package="com.team5.*.mapper"/>
+		<!-- 마이바티스의 인터페이스를 읽어서 사용할 수 있도록 처리 -->
+		<context:component-scan base-package="com.team5.*.mapper"/>
+		
+		
+</beans>

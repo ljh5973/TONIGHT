@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+  
+<tiles-definitions>
+	
+	<!-- 1. 타일즈 파일이 가져야하는 레이아웃형식을 정의 -->
+	<!-- name속성은 상속받아서 사용할 이름, template은 타일즈템플릿의 경로 -->
+	<definition name="templateDefault" template="/WEB-INF/tiles/templateDefault.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- 위에 선언된 타일즈템플릿을 상속 -->
+	<!-- name속성은 controller에서 연결할 이름 -->
+	<definition name="test/*" extends="templateDefault">
+		<put-attribute name="body" value="/WEB-INF/views/test/{1}.jsp" />
+	</definition>
+	
+	
+	<!-- user화면 템플릿 -->
+ 	<definition name="templateHeader" template="/WEB-INF/tiles/templateHeader.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	
+	</definition>
+	
+	<definition name="user/*" extends="templateHeader">
+		<put-attribute name="body" value="/WEB-INF/views/user/{1}.jsp"/>
+	</definition> 
+	
+	
+	
+	
+	
+	
+	<!-- 공통화면에 대한 정의 맵핑 -->
+	<definition name="templateBasic" template="/WEB-INF/tiles/templateBasic.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="right" value="/WEB-INF/tiles/right.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"  value="/WEB-INF/tiles/footer.jsp"/>
+	</definition>
+	
+	<definition name="*" extends="templateBasic">
+		<put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	
+	<definition name="*/*" extends="templateBasic">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+
+	
+	
+
+	
+	
+</tiles-definitions>  
