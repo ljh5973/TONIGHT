@@ -49,37 +49,37 @@
         </div>
     </header>
 
-    <section>
+    <section class="junsec">
        <div>
            <div class="container">
                <div class="row">
-                   <div class="join">
-                       <div class="col-sm-12 col-xs-12 join-wrap">
-                           <div class="col-sm-12 col-xs-12 id-form">
+                   <div class="junjoin">
+                       <div class="col-sm-12 col-xs-12 junjoin-wrap">
+                           <div class="col-sm-12 col-xs-12 junid-form">
                                아이디<br/>
-                               <input type="text" class="form-control id" placeholder="아이디는 4~8글자" style="display:inline-block">
-                               <button type="button" id="idCheck">중복</button>
+                               <input type="text" class="form-control junid" placeholder="아이디는 4~8글자" style="display:inline-block">
+                               <button type="button" id="junidCheck">중복</button>
                             </div>
-                            <div class="col-sm-12 col-xs-12 pw-form">
+                            <div class="col-sm-12 col-xs-12 junpw-form">
                                 비밀번호<br/>
-                                <input type="password" class="form-control pw">
+                                <input type="password" class="form-control junpw">
                             </div>
-                            <div class="col-sm-12 col-xs-12 pwCheck-form">
+                            <div class="col-sm-12 col-xs-12 junpwCheck-form">
                                 비밀번호 확인<br/>
-                                <input type="password" class="form-control pwCheck">
-                                <span class="pwMsg"></span>
+                                <input type="password" class="form-control junpwCheck">
+                                <span class="junpwMsg"></span>
                             </div>
-                            <div class="col-sm-12 col-xs-12 birth-form">
+                            <div class="col-sm-12 col-xs-12 junbirth-form">
                                 생년월일<br/>
-                                <input type="text" class="form-control birth" style="display:inline-block">
-                                <button type="button" class="cal">달력</button>
+                                <input type="text" class="form-control junbirth" style="display:inline-block">
+                                <button type="button" class="juncal">달력</button>
                             </div>
-                            <div class="col-sm-12 col-xs-12 add-form">
+                            <div class="col-sm-12 col-xs-12 junadd-form">
                                 주소<br/>
-                                <input type="text" class="form-control add"><br/>
+                                <input type="text" class="form-control junadd"><br/>
                                 상세주소<br/>
-                                <input type="text" class="form-control add2">
-                                <button type="button" class="joinbtn">회원가입</button>
+                                <input type="text" class="form-control junadd2">
+                                <button type="button" class="junjoinbtn">회원가입</button>
                             </div>
                             
                         </div>
@@ -91,8 +91,8 @@
 
 
         <script>
-            var idCheck = document.getElementById("idCheck");
-            var id = document.getElementsByClassName("id");
+            var idCheck = document.getElementById("junidCheck");
+            var id = document.getElementsByClassName("junid");
 
             // console.log(id);
             // console.log(idCheck);
@@ -101,23 +101,23 @@
 
                 console.log(id[0]);
 
-                window.open("04.popup.html", "팝업창", "width=500 , height=300");
+                window.open("04.idCheckpopup.html", "팝업창", "width=500 , height=300");
             }
 
-            var pw = document.querySelector(".pw");
-            var pwCheck = document.querySelector(".pwCheck");
-            var pwMsg = document.querySelector(".pwMsg");
+            var pw = document.querySelector(".junpw");
+            var pwCheck = document.querySelector(".junpwCheck");
+            var pwMsg = document.querySelector(".junpwMsg");
 
             console.log(pw,pwCheck);
 
             pwCheck.onkeyup = function() {
 
                 if(pw.value === pwCheck.value) {
-                    pwCheck.style.borderColor = "green";
-                    pwMsg.innerHTML = "비밀번호와 같습니다.";
+                    pwCheck.style.borderColor = "#5f1e09f1";
+                    pwMsg.innerHTML = "비밀번호가 같습니다.";
                 } else {
                     pwCheck.style.borderColor = "Red";
-                    pwMsg.innerHTML = "";
+                    pwMsg.innerHTML = "비밀번호가 다릅니다.";
                 }
             }
 

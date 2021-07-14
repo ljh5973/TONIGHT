@@ -287,47 +287,99 @@ textarea, button, select{
     -o-appearance: none;
 }
 
-section{
+.junsec{
     background-color: rgb(250,250,250);
 }
-.container, .row {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+@media screen and (min-width : 769px) {
+    .container, .row {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .junlogin-form{
+        text-align: center;
+        height: 500px;
+        padding: 0;
+        width: 100%;
+    }
+    .junlogin-btn {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        height: 80%;
+        padding-top: 140px;
+    }
+    
+    a:hover{
+        color: #5f1e09f1;
+    }
+    .junloginbtnclick, #custom-login-btn > img {
+        display: block;
+        margin: auto;
+        width: 90%;
+        height: 30%;
+    }
+    .junloginbtnclick {
+        font-size: 45px;
+        background-color: #5f1e09f1;
+        margin-bottom: 30px;
+        color: rgb(250,250,250);
+        text-decoration: none;
+    }
+    #juntonight-loginbtn {
+        font-family: 'Lobster', cursive;
+    font-size: 70px;
+    font-size: 50px;
+        height: 100%;
+    }
 }
 
-.login-form{
-    text-align: center;
-    height: 500px;
-    padding: 0;
-    width: 100%;
+@media screen and (max-width : 768px) {
+    
+    .container, .row {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .junlogin-form{
+        text-align: center;
+        height: 500px;
+        padding: 0;
+        width: 100%;
+    }
+    .junlogin-btn {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        height: 80%;
+        padding-top: 140px;
+    }
+    
+    a:hover{
+        color: #5f1e09f1;
+    }
+    .junloginbtnclick, #custom-login-btn > img {
+        display: block;
+        margin: auto;
+        width: 90%;
+        height: 30%;
+    }
+    .junloginbtnclick {
+        font-size: 45px;
+        background-color: #5f1e09f1;
+        margin-bottom: 30px;
+        color: rgb(250,250,250);
+        text-decoration: none;
+    }
+    #juntonight-loginbtn {
+        font-family: 'Lobster', cursive;
+    font-size: 70px;
+        height: 100%;
+        font-size: 43px;
+    }
 }
-.login-btn {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center;
-    height: 80%;
-    padding-top: 140px;
-}
-
-a:hover{
-    color: #5f1e09f1;
-}
-.loginbtnclick, #custom-login-btn > img {
-    display: block;
-    margin: auto;
-    width: 90%;
-    height: 30%;
-}
-.loginbtnclick {
-    font-size: 45px;
-    background-color: #5f1e09f1;
-    margin-bottom: 30px;
-    color: rgb(250,250,250);
-    text-decoration: none;
-}
-#tonight-loginbtn {
-    height: 100%;
-}
-
-
+    
+    
+    

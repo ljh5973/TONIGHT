@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-/* 공통 디자인 */
-   /* input type=text */
-   .id:focus, .pw:focus {
-       border: 2px solid #5f1e09f1;
-       box-shadow: none;
-       background-color: rgb(253,248,247);
-   }
-   
-
 
 /* 헤더영역 */
 .header-logo a{
@@ -280,74 +271,158 @@ textarea, button, select{
     -o-appearance: none;
     box-shadow: none;
 }
-section{
-    background-color: rgb(250, 250, 250);
-}
-.login-wrap{
-    margin: auto;
-    overflow: hidden;
-
-    width: 100%;
-    height: 500px;
-}
-.login-wrap2{
-    margin-left: 30%;
-    display: inline-block;
-    padding: 10px;
-    width: 40%;
-    height: 100%;
-}
-
-.idpw {
-    padding-top: 10%;
-    width: 100%;
-    margin: 0 auto;
-    font-weight: bolder;
-}
-.idpw > .id {
-    margin-bottom: 15px;
-    height: 45px;
-    width: 100%;
-    padding: 0;
-    border: 2px solid rgb(240, 220, 220);
-}
-.idpw > .pw {
-    margin-bottom: 15px;
-    height: 45px;
-    width: 100%;
-    padding: 0;
-    border: 2px solid rgb(240, 220, 220);
-}
-.login, .kakaologin {
-    height: 50px;
-    width: 100%;
-    margin-bottom: 5px;
-    background-color: rgb(240, 220, 220);
-    border-color: rgb(240,220,220);
-    color: #5f1e09f1;
-}
-
-.login-form {
-    width: 100%;
-    margin: 0 auto;
-}
-.login-form > input {
-    font-weight: bolder;
-}
-.idpwfind {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-bottom: 15px;
-}
-.idpwfind > .join {
-    float: right;
-}
-
-button {
-    background-color: white;
-    border: none;
-}
+@media screen and (min-width: 769px) {
 
 
-
+    .junsec{
+        background-color: rgb(250, 250, 250);
+    }
+    .junlogin-wrap{
+        margin: auto;
+        overflow: hidden;
+        
+        width: 100%;
+        height: 500px;
+    }
+    .junlogin-wrap2{
+        margin-left: 30%;
+        display: inline-block;
+        padding: 10px;
+        width: 40%;
+        height: 100%;
+    }
+    
+    .junidpw {
+        padding-top: 10%;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: bolder;
+    }
+    .junidpw > .junid {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 3px solid rgb(240, 220, 220);
+    }
+    .junidpw > .junpw {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 3px solid rgb(240, 220, 220);
+    }
+    .junlogin{
+        height: 50px;
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: rgb(240, 220, 220);
+        border-color: rgb(240,220,220);
+        color: #5f1e09f1;
+    }
+    
+    .junlogin-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .junlogin-form > input {
+        font-weight: bolder;
+    }
+    .junidpwfind {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 15px;
+    }
+    .junidpwfind > .junjoin {
+        float: right;
+    }
+    
+    button {
+        background-color: white;
+        border: none;
+    }
+    .junid:focus, .junpw:focus {
+        box-shadow: none;
+        border: 3px solid #5f1e09f1;
+        background-color: rgb(253,248,247);
+    }
+}
+@media screen and (max-width: 768px){
+    .junsec{
+        background-color: rgb(250, 250, 250);
+    }
+    .junlogin-wrap{
+        margin: auto;
+        overflow: hidden;
+        
+        width: 100%;
+        height: 500px;
+    }
+    .junlogin-wrap2{
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .junidpw {
+        padding-top: 10%;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: bolder;
+    }
+    .junidpw > .junid {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 2px solid rgb(240, 220, 220);
+    }
+    .junidpw > .junpw {
+        margin-bottom: 15px;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        border: 2px solid rgb(240, 220, 220);
+    }
+    .junlogin{
+        height: 50px;
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: rgb(240, 220, 220);
+        border-color: rgb(240,220,220);
+        color: #5f1e09f1;
+    }
+    
+    .junlogin-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .junlogin-form > input {
+        font-weight: bolder;
+    }
+    .junidpwfind {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 15px;
+    }
+    .junidpwfind > .junjoin {
+        float: right;
+    }
+    
+    button {
+        background-color: white;
+        border: none;
+    }
+    .junid:focus, .junpw:focus {
+        box-shadow: none;
+        border: 3px solid #5f1e09f1;
+        background-color: rgb(253,248,247);
+    }
+}
+    
+    
+    
+    
