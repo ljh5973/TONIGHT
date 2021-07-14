@@ -506,8 +506,10 @@ input[id="menuicon"]:checked+label{
 
 .k-border{
     border: 1px solid #888;
-    padding: 0;
     margin: 5px 5px;
+    overflow: hidden;
+    padding-top: 30px ;
+    padding-bottom: 30px;
 }
 
 /* footer */
@@ -540,5 +542,28 @@ footer .footer-menu > li > a{
 }
 .copyright{
   text-align: center;
+    
+}
+
+/* .table {
+    width: 450px;
+    height: 700px;
+    border-color: 1px #777 solid;
+    float: left;
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #444444;
+  }
+
+th, td {
+    border: 1px solid #444444;
+} */
+
+#map {
+    float: left;
     
 }
